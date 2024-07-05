@@ -57,6 +57,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Freeman&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=poppins&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
@@ -64,6 +65,7 @@
     <!-- css -->
 
   <link rel="stylesheet" href="Home Pages/css/style.css">
+  <link rel="stylesheet" href="Home Pages/css/main.css">
   <link rel="stylesheet" href="Home Pages/css/animations.css">
 
     <!-- Preload Images -->
@@ -94,118 +96,120 @@
     <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
   </a> -->
 
-  <!-- Header -->
+ <!-- Header -->
 
-  <header class="header" data-header>
-    <div class="container">
+ <header class="header" data-header>
+  <div class="container">
 
-      <a href="" class="logo">
-        <img src="Home Pages/images/Home Page/logo.png" width="200" height="37" alt="Wren logo">
-      </a>
+    <a href="" class="logo">
+      <img src="Home Pages/images/Home Page/logo.png" width="200" height="auto" alt="Wren logo">
+    </a>
 
-      <nav class="navbar" data-navbar>
+    <nav class="navbar" data-navbar>
 
-        <div class="navbar-top">
-          <a href="" class="logo">
-            <img src="Home Pages/images/Home Page/logo.png" width="200" height="37" alt="Wren logo">
-          </a>
+      <div class="navbar-top">
+        <a href="" class="logo">
+          <img src="Home Pages/images/Home Page/logo.png" width="200" height="auto" alt="Wren logo">
+        </a>
 
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler  onclick="document.getElementById('arrows').style.display='flex'">
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a class="active home" href="https://sachicodex.github.io" class="navbar-link hover-1"
+            data-nav-toggler><b>Home</b></a>
+        </li>
+
+        <li>
+          <a href="https://sachicodex.github.io/Blogs.html" class="navbar-link hover-1 blogs" data-nav-toggler><b>Blogs</b></a>
+        </li>
+
+        <li>
+          <a href="https://sachicodex.github.io/music" class="navbar-link hover-1 music"
+            data-nav-toggler><b>Music</b></a>
+        </li>
+
+        <li>
+          <a href="https://sachicodex.github.io/services/game" class="navbar-link hover-1 services"
+            data-nav-toggler><b>Services</b></a>
+        </li>
+
+        <li>
+          <a href="https://wa.me/message/JO6HOPJ4WQJ7C1" target=”_blank” class="navbar-link hover-1 contact" data-nav-toggler><b>Contact</b></a>
+        </li>
+
+
+      </ul>
+
+      <div class="navbar-bottom" >
+
+        <div class="profile-card">
+          <img src="Home Pages/images/Home Page/author.png" width="48" height="48" alt="Steven"
+            class="profile-banner">
+
+          <div>
+            <p class="card-title">Hello Viwer !</p>
+
+            <p class="card-subtitle" style="margin-top: -15px;">
+              Contract me for more information.
+            </p>
+          </div>
         </div>
 
-        <ul class="navbar-list">
+        <!-- Header Only Mobile -->
+
+        <ul class="link-list">
 
           <li>
-            <a class="active" href="https://sachicodex.github.io" class="navbar-link hover-1"
-              data-nav-toggler>Home</a>
+            <a href="https://github.com/sachicodex" target=”_blank" class="navbar-bottom-link hover-1">GitHub</a>
           </li>
 
           <li>
-            <a href="https://sachicodex.github.io/Blogs.html" class="navbar-link hover-1" data-nav-toggler>Blogs</a>
+            <a href="https://www.facebook.com/share/EudUZbESuvZpSwTD/?mibextid=qi2Omg" target=”_blank" class="navbar-bottom-link hover-1">Facebook</a>
           </li>
 
           <li>
-            <a href="https://sachicodex.github.io/music" class="navbar-link hover-1"
-              data-nav-toggler>Music</a>
+            <a href="https://youtube.com/@smartguramusic?si=ZVC1dlZomy6PEL7R" target=”_blank" class="navbar-bottom-link hover-1">YouTube</a>
           </li>
 
           <li>
-            <a href="https://sachicodex.github.io/services/game" class="navbar-link hover-1"
-              data-nav-toggler>Services</a>
+            <a href="https://www.fiverr.com/yt_sachintha" target=”_blank" class="navbar-bottom-link hover-1">Fiverr</a>
           </li>
 
           <li>
-            <a href="https://api.whatsapp.com/send/?phone=94764439530&text=Hi+Sachintha+Lakshan%2C%0ACan+you+tell+me+your+new+information%3F&type=phone_number&app_absent=0"
-              target=”_blank” class="navbar-link hover-1" data-nav-toggler>Contact</a>
+            <a href="https://wa.me/message/JO6HOPJ4WQJ7C1" target=”_blank" class="navbar-bottom-link hover-1">WhatsApp</a>
           </li>
 
+          <li>
+            <a href="https://x.com/hello_sachintha" target=”_blank" class="navbar-bottom-link hover-1">Twitter ( X )</a>
+          </li>
 
         </ul>
 
-        <div class="navbar-bottom" >
+      </div>
 
-          <div class="profile-card">
-            <img src="Home Pages/images/Home Page/author.png" width="48" height="48" alt="Steven"
-              class="profile-banner">
+      <p class="copyright-text">
+        Copyright 2022 © SACHINTHA LAKSHAN.
+        Developer & Designer
+      </p>
 
-            <div>
-              <p class="card-title">Hello Viwer !</p>
+    </nav>
 
-              <p class="card-subtitle">
-                Enjoy your day with me.
-              </p>
-            </div>
-          </div>
+    <a href="https://sachicodex.github.io/next_music_login" target=”_blank” class="btn btn-primary">Download</a>
 
-          <!-- Header Only Mobile -->
+    <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+      <ion-icon name="menu-outline" aria-hidden="true" ></ion-icon>
+    </button>
 
-          <ul class="link-list">
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Profile</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <p class="copyright-text">
-          Copyright 2022 © SACHINTHA LAKSHAN.
-          Developed by SACHI.
-        </p>
-
-      </nav>
-
-      <a href="#" target=”_blank” class="btn btn-primary">Download</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler onclick="document.getElementById('arrows').style.display='none'">
-        <ion-icon name="menu-outline" aria-hidden="true" ></ion-icon>
-      </button>
-
-    </div>
-  </header>   <div class="cursor"></div>
+  </div>
+</header>   
+  
+  <div class="cursor"></div>
+  
   <main>
     <img src="Home Pages/images/Home Page/chat-bot.png" class="chatnew">
 

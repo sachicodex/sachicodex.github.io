@@ -1,62 +1,56 @@
-
-
 //step 1: get DOM
-let nextDom = document.getElementById('next');
-let prevDom = document.getElementById('prev');
+let nextDom = document.getElementById("next");
+let prevDom = document.getElementById("prev");
 
-let carouselDom = document.querySelector('.carousel');
-let SliderDom = carouselDom.querySelector('.carousel .list');
-let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-let timeDom = document.querySelector('.carousel .time');
+let carouselDom = document.querySelector(".carousel");
+let SliderDom = carouselDom.querySelector(".carousel .list");
+let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
+let timeDom = document.querySelector(".carousel .time");
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
 let timeAutoNext = 17000;
 
-nextDom.onclick = function(){
-    showSlider('next');    
-}
+nextDom.onclick = function () {
+  showSlider("next");
+};
 
-prevDom.onclick = function(){
-    showSlider('prev');    
-}
+prevDom.onclick = function () {
+  showSlider("prev");
+};
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
-    next.click();
-}, timeAutoNext)
-function showSlider(type){
-    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
-    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
-    
-    if(type === 'next'){
-        SliderDom.appendChild(SliderItemsDom[0]);
-        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-        carouselDom.classList.add('next');
-    }else{
-        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-        carouselDom.classList.add('prev');
-    }
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-    }, timeRunning);
+  next.click();
+}, timeAutoNext);
+function showSlider(type) {
+  let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
+  let thumbnailItemsDom = document.querySelectorAll(
+    ".carousel .thumbnail .item"
+  );
 
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-        next.click();
-    }, timeAutoNext)
+  if (type === "next") {
+    SliderDom.appendChild(SliderItemsDom[0]);
+    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+    carouselDom.classList.add("next");
+  } else {
+    SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+    thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+    carouselDom.classList.add("prev");
+  }
+  clearTimeout(runTimeOut);
+  runTimeOut = setTimeout(() => {
+    carouselDom.classList.remove("next");
+    carouselDom.classList.remove("prev");
+  }, timeRunning);
+
+  clearTimeout(runNextAuto);
+  runNextAuto = setTimeout(() => {
+    next.click();
+  }, timeAutoNext);
 }
 
-
-
-'use strict';
-
-
-
-
+("use strict");
 
 /**
  * Add event listener on multiple elements
@@ -66,9 +60,7 @@ const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
-}
-
-
+};
 
 /**
  * MOBILE NAVBAR TOGGLER
@@ -80,11 +72,9 @@ const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const toggleNav = () => {
   navbar.classList.toggle("active");
   document.body.classList.toggle("nav-active");
-}
+};
 
 addEventOnElements(navTogglers, "click", toggleNav);
-
-
 
 /**
  * HEADER ANIMATION
@@ -104,8 +94,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-
 /**
  * SLIDER
  */
@@ -115,14 +103,17 @@ const sliderContainer = document.querySelector("[data-slider-container]");
 const sliderPrevBtn = document.querySelector("[data-slider-prev]");
 const sliderNextBtn = document.querySelector("[data-slider-next]");
 
-let totalSliderVisibleItems = Number(getComputedStyle(slider).getPropertyValue("--slider-items"));
-let totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+let totalSliderVisibleItems = Number(
+  getComputedStyle(slider).getPropertyValue("--slider-items")
+);
+let totalSlidableItems =
+  sliderContainer.childElementCount - totalSliderVisibleItems;
 
 let currentSlidePos = 0;
 
 const moveSliderItem = function () {
   sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
-}
+};
 
 /**
  * NEXT SLIDE
@@ -138,7 +129,7 @@ const slideNext = function () {
   }
 
   moveSliderItem();
-}
+};
 
 sliderNextBtn.addEventListener("click", slideNext);
 
@@ -154,7 +145,7 @@ const slidePrev = function () {
   }
 
   moveSliderItem();
-}
+};
 
 sliderPrevBtn.addEventListener("click", slidePrev);
 
@@ -162,27 +153,31 @@ sliderPrevBtn.addEventListener("click", slidePrev);
  * RESPONSIVE
  */
 window.addEventListener("resize", function () {
-  totalSliderVisibleItems = Number(getComputedStyle(slider).getPropertyValue("--slider-items"));
-  totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+  totalSliderVisibleItems = Number(
+    getComputedStyle(slider).getPropertyValue("--slider-items")
+  );
+  totalSlidableItems =
+    sliderContainer.childElementCount - totalSliderVisibleItems;
 
   moveSliderItem();
 });
 
-  window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('selection'); // Replace with your element selector
-  
-    for (const section of sections) {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const windowTop = window.pageYOffset;
-      const windowHeight = window.innerHeight;
-  
-      if (sectionTop >= windowTop && sectionTop + sectionHeight <= windowTop + windowHeight) {
-        section.classList.add('active');
-      } else {
-        section.classList.remove('active');
-      }
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("selection"); // Replace with your element selector
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const windowTop = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+
+    if (
+      sectionTop >= windowTop &&
+      sectionTop + sectionHeight <= windowTop + windowHeight
+    ) {
+      section.classList.add("active");
+    } else {
+      section.classList.remove("active");
     }
-  });
-  
-  
+  }
+});
