@@ -1322,6 +1322,7 @@ nav li { display: none;}
     .team button{ 
         margin-top: -10px;
         width: 81vw;
+        font-family: 'fredoka expanded';
     }
 
     .footer .container{
