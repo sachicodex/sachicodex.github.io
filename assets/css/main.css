@@ -250,7 +250,7 @@ nav li { display: none;}
     margin-left: 40px;
 }
 
-.social-container .facebook, .youtube , .tiktok{
+.social-container .whatsapp, .youtube , .tiktok{
     width: 70%;
     margin: auto;
     border-radius: 40px;
@@ -750,7 +750,7 @@ nav li { display: none;}
     
     .social-container h2{ font-size: 75px;}
     
-    .social-container .facebook, .youtube , .tiktok{
+    .social-container .whatsapp, .youtube , .tiktok{
         width: 80%;
         padding: 15px;
     }
@@ -961,7 +961,7 @@ nav li { display: none;}
     
     .social-container h2{ font-size: 68px;}
     
-    .social-container .facebook, .youtube , .tiktok{
+    .social-container .whatsapp, .youtube , .tiktok{
         width: 80%;
         padding: 15px;
     }
@@ -1218,7 +1218,7 @@ nav li { display: none;}
     
     .social-container h2{ font-size: 40px;}
     
-    .social-container .facebook, .youtube , .tiktok{
+    .social-container .whatsapp, .youtube , .tiktok{
         width: 80%;
         padding: 15px;
     }
