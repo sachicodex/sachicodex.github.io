@@ -207,6 +207,7 @@ nav li { display: none;}
     font-weight: 550;
     margin-top: -20px;
     color: #E7E7E7;
+    text-align: justify;
 }
 
 .about button{
@@ -390,7 +391,7 @@ nav li { display: none;}
 .capacities .round-shape {
     width: 17vw;
     height: 17vw;
-    background: black;
+    background: rgba(0, 0, 0, 0);
     border-radius: 35px;
     display: flex;
     justify-content: center;
