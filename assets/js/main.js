@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
       document.querySelector(".parent").style.display = "none";
+      document.body.style.overflow = "auto";
     }, 1000); // Matches the transition duration
   }, 4000);
 });
