@@ -1,3 +1,5 @@
+document.body.style.scrollBehavior = "smooth";
+
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".parent").style.opacity = "0";
