@@ -280,6 +280,7 @@ nav li { display: none;}
 .social-container{
     position: relative;
     top: 130px;
+    overflow: hidden;
 }
 
 .social-container h2{

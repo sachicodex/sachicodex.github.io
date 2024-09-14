@@ -41,6 +41,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,17 +122,17 @@
     <div class="social-container">
     <h2>JOIN ON SOCIAL MEDIA</h2>
         <div class="social-box">
-    <div class="whatsapp">
+    <div class="whatsapp" class="animated-section" data-aos="fade-up-right">
       <center><img src="assets/img/whatsapp.png"></center>
         <p>Hello everyone! Contact me for professional chats and creative projects. I have knowledge in Web Design, Graphic Design, UI/UX Design, and Video/Audio Editing. If you want to build a stylish website with an improved user experience, I am here to help. Passionate about various projects and collaborations, I stay up to date with the latest trends in design and content creation. With innovation, quality and attention to detail, I am committed to delivering exceptional results. Let's work together to bring your vision to life and create something outstanding! </p>
         <button class="btn1" onclick="window.open('https://wa.me/message/JO6HOPJ4WQJ7C1')"> Let chat us</button>
     </div>
-    <div class="youtube">
+    <div class="youtube" class="animated-section" data-aos="fade-up">
       <center><img src="assets/img/youtube.png"></center>
-        <p>I have two YouTube channels Smart Guru and Smart Guru Music. Smart Gura analyzes the latest technology to enhance your knowledge and Smart Gura Music YouTube channel provides copyright free background music for your YouTube videos. Subscribe us to discover the latest trends, tips and tricks to improve your YouTube experience. Whether you are a video enthusiast or new to the platform, I won't forget to keep you covered with essential insights and updates. Join us as we explore the evolution of YouTube and its profound impact on modern digital culture.</p>
+        <p>I have two YouTube channels Code x Master and Smart Gura Music. C x M analyzes the latest technology to enhance your knowledge and Smart Gura Music YouTube channel provides copyright free background music for your YouTube videos. Subscribe us to discover the latest trends, tips and tricks to improve your YouTube experience. Whether you are a video enthusiast or new to the platform, I won't forget to keep you covered with essential insights and updates. Join us as we explore the evolution of YouTube and its profound impact on modern digital culture.</p>
         <button class="btn2" onclick="window.open('http://bit.ly/⇄youtube')">Subscribe</button>
     </div>
-    <div class="tiktok">
+    <div class="tiktok" class="animated-section" data-aos="fade-up-left">
         <center><img src="assets/img/tiktok.png"></center>
         <p>TikTok is a globally renowned platform for content creation and I am happy to connect with you through my TikTok account. I create interesting videos and often base my videos on questions and comments from viewers. So if you have any interesting or pressing questions, please leave them in the comments section. Your feedback - whether positive or constructive - is always welcome and helps me improve. Feel free to let me know how I can assist you with any of your technical projects. Don't forget to follow me on TikTok to stay updated and join the fun!</p>
         <button class="btn3" onclick="window.open('')">Follow us</button>
@@ -322,5 +323,16 @@
 </section>
 
 <script src="assets/js/main.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      offset: 200, // Animation trigger position
+      once: false // Allow multiple scroll-down animations
+    });
+  </script>
 </body>
 </html>

@@ -13,3 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000); // Matches the transition duration
   }, 4000);
 });
+
+
+// Animations
+
