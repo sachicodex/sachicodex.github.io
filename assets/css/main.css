@@ -18,7 +18,8 @@ html { scroll-behavior: smooth;}
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(90deg, #000000, #31223A, #000000);
+    background: rgb(5,21,41);
+    background: linear-gradient(90deg, rgb(2, 9, 18) 0%, rgb(5, 17, 44) 35%, rgba(5, 17, 44) 65%, rgba(2, 9, 18) 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -95,7 +96,7 @@ a { text-decoration: none;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(105,105,105,0.27);
+    background: rgba(28, 28, 70, 0.399);
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(60px);
     margin-top: 10px;
