@@ -14,6 +14,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 });
 
-
 // Animations
-
