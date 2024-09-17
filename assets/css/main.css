@@ -161,6 +161,7 @@ nav li {
     animation-delay: 4.3s;
     /* 4300 milliseconds */
 }
+
 .delay-4400ms {
     animation-delay: 4.4s;
     /* 4300 milliseconds */
@@ -371,7 +372,7 @@ nav li {
     border: 3.2px solid transparent;
     border-radius: 60px;
     background:
-        linear-gradient(to left, #2c1b34, #2c1b34),
+        linear-gradient(to left, #0e112f, #0e112f),
         linear-gradient(to left, #00FFA3, #002B99);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
@@ -394,7 +395,7 @@ nav li {
     border: 3.2px solid transparent;
     border-radius: 60px;
     background:
-        linear-gradient(to left, #2c1b34, #2c1b34),
+        linear-gradient(to left, #0e112f, #0e112f),
         linear-gradient(to left, #002B99, #00FFA3, #002B99);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
@@ -417,7 +418,7 @@ nav li {
     border: 3.2px solid transparent;
     border-radius: 60px;
     background:
-        linear-gradient(to right, #2c1b34, #2c1b34),
+        linear-gradient(to left, #0e112f, #0e112f),
         linear-gradient(to right, #00FFA3, #002B99);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
@@ -775,6 +776,13 @@ input[type="radio"]:checked+label::before {
         overflow-y: scroll;
     }
 
+    nav .logo {
+        width: 200px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+
     nav .open-slidebar-button {
         float: right;
         top: 0;
@@ -1016,7 +1024,7 @@ input[type="radio"]:checked+label::before {
 
     nav .links-container {
         width: 300px;
-        height: 100vh;
+        height: 100dvh;
         right: -65%;
         top: -10px;
         z-index: 999;
@@ -1036,6 +1044,13 @@ input[type="radio"]:checked+label::before {
         transition-duration: 0.4s;
         transition-timing-function: ease-out;
         transition-delay: 0s;
+    }
+
+    nav .logo {
+        width: 200px;
+        position: absolute;
+        top: 15px;
+        left: 0;
     }
 
     nav .open-slidebar-button {
@@ -1321,8 +1336,9 @@ input[type="radio"]:checked+label::before {
     nav a {
         color: white;
         font-size: 23px;
-        top: -18px;
+        top: 0px;
         position: relative;
+        padding: 0px 30px;
     }
 
     .logo {
@@ -1336,9 +1352,9 @@ input[type="radio"]:checked+label::before {
     }
 
     nav .links-container {
-        width: 290px;
+        width: 100dvw;
         height: 100vh;
-        right: -120dvw;
+        right: -130dvw;
         top: -10px;
         z-index: 999;
         padding: 37px;
@@ -1346,9 +1362,6 @@ input[type="radio"]:checked+label::before {
         color: white;
         flex-direction: column;
         align-items: flex-start;
-        background: rgba(0, 0, 0, 0.733);
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
         font-weight: 600;
         font-family: var(--main-font);
         transition: 0.4s ease-out;
@@ -1357,6 +1370,15 @@ input[type="radio"]:checked+label::before {
         transition-timing-function: ease-out;
         transition-delay: 0s;
         overflow-y: scroll;
+        background: rgb(0, 0, 0);
+        backdrop-filter: blur(60px);
+        -webkit-backdrop-filter: blur(60px);
+    }
+
+    nav .logo {
+        width: 200px;
+        position: absolute;
+        top: 6px;
     }
 
     nav .open-slidebar-button {
@@ -1373,7 +1395,7 @@ input[type="radio"]:checked+label::before {
     nav .close-slidebar-button {
         cursor: pointer;
         float: right;
-        padding-right: 50px;
+        padding-right: 60px;
     }
 
     #slidebar-active:checked~.links-container {
@@ -1381,12 +1403,12 @@ input[type="radio"]:checked+label::before {
     }
 
     #slidebar-active:checked~#overlay {
-        background-color: rgba(0, 0, 0, 0.382);
+        background-color: rgba(0, 0, 0, 0.442);
         width: 100dvw;
         height: 100dvh;
         position: fixed;
         top: -10px;
-        left: -100px;
+        left: -8px;
         z-index: 9;
         transition: 0.4s ease-in-out;
     }
