@@ -15,6 +15,11 @@
     display: none;
 }
 
+*::selection {
+    background: none;
+    color: rgb(0, 255, 72);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -36,6 +41,17 @@ a {
     text-decoration: none;
 }
 
+.animate__animated {
+    animation-duration: 2s;
+}
+
+.delay-4300ms {
+    animation-delay: 4.3s;
+}
+
+.delay-4400ms {
+    animation-delay: 4.4s;
+}
 
 .parent {
     display: flex;
@@ -74,7 +90,6 @@ a {
     }
 }
 
-/* Main Content Styles */
 .main-content {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -151,22 +166,6 @@ nav {
 nav li {
     display: none;
 }
-
-.animate__animated {
-    animation-duration: 2s;
-    /* Adjust as needed */
-}
-
-.delay-4300ms {
-    animation-delay: 4.3s;
-    /* 4300 milliseconds */
-}
-
-.delay-4400ms {
-    animation-delay: 4.4s;
-    /* 4300 milliseconds */
-}
-
 
 /* ---------------- Hero section ---------------- */
 
@@ -304,7 +303,6 @@ nav li {
     cursor: pointer;
 }
 
-
 /* ---------------- Social section ---------------- */
 
 .social-container {
@@ -361,7 +359,6 @@ nav li {
     font-size: 18px;
     color: white;
     border-radius: 60px;
-    /* Fully rounded corners */
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -384,7 +381,6 @@ nav li {
     font-size: 18px;
     color: white;
     border-radius: 60px;
-    /* Fully rounded corners */
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -407,7 +403,6 @@ nav li {
     font-size: 18px;
     color: white;
     border-radius: 60px;
-    /* Fully rounded corners */
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -423,12 +418,6 @@ nav li {
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
-
-
-
-
-
-
 
 /* ---------------- Capacities section ---------------- */
 
@@ -591,7 +580,6 @@ input[type="radio"]:checked+label::before {
     color: #ffffff;
 }
 
-
 /*------------------- Team section -------------------*/
 
 .team {
@@ -641,7 +629,6 @@ input[type="radio"]:checked+label::before {
     letter-spacing: 2px;
 }
 
-
 /*------------------- Footer section -------------------*/
 
 .footer .container {
@@ -652,7 +639,6 @@ input[type="radio"]:checked+label::before {
     padding: 30px 30px 0px 0px;
     box-shadow: 0px -200px 100000px rgba(30, 57, 126, 0.516);
 }
-
 
 .footer img {
     position: absolute;
@@ -715,9 +701,6 @@ input[type="radio"]:checked+label::before {
     font-weight: 600;
     font-size: 18px;
 }
-
-
-
 
 @media (max-width: 1200px) and (min-width: 984px) {
 
