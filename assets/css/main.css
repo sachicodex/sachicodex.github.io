@@ -54,39 +54,149 @@ a {
 }
 
 .parent {
+    background: black;
+    margin: auto;
+    padding: 0;
     display: flex;
+    place-content: center;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #000;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
 }
 
-.loader {
-    width: 80px;
-    aspect-ratio: 1;
-    border: 10px solid #000;
-    box-sizing: border-box;
-    background:
-        radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
-        radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
-        radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
-        radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
-        radial-gradient(farthest-side, #fff 98%, #0000) 50%/20px 20px,
-        linear-gradient(#fff 0 0) 50%/100% 10px,
-        linear-gradient(#fff 0 0) 50%/10px 100%,
-        #000;
-    background-repeat: no-repeat;
-    filter: blur(4px) contrast(10);
-    animation: l13 0.8s infinite;
+.pl1 {
+    display: block;
+    width: 8em;
+    height: 8em;
 }
 
-@keyframes l13 {
+.pl1__g,
+.pl1__rect {
+    animation: pl1-a 2.1s cubic-bezier(0.65, 0, 0.35, 1) 2;
+}
+
+.pl1__g {
+    transform-origin: 64px 64px;
+}
+
+.pl1__rect:first-child {
+    animation-name: pl1-b;
+}
+
+.pl1__rect:nth-child(2) {
+    animation-name: pl1-c;
+}
+
+@keyframes pl1-a {
+    from {
+        transform: rotate(0);
+    }
+
+    80%,
+    to {
+        animation-timing-function: steps(1, start);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes pl1-b {
+    from {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+    }
+
+    20% {
+        animation-timing-function: steps(1, start);
+        width: 40px;
+        height: 0;
+    }
+
+    60% {
+        animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        width: 0;
+        height: 40px;
+    }
+
+    80%,
+    to {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@keyframes pl1-c {
+    from {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+        transform: translate(0, 48px);
+    }
+
+    20% {
+        animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+        width: 40px;
+        height: 88px;
+        transform: translate(0, 0);
+    }
+
+    40% {
+        animation-timing-function: cubic-bezier(0.33, 0, 0.67, 0);
+        width: 40px;
+        height: 40px;
+        transform: translate(0, 0);
+    }
+
+    60% {
+        animation-timing-function: cubic-bezier(0.33, 1, 0.67, 1);
+        width: 88px;
+        height: 40px;
+        transform: translate(0, 0);
+    }
+
+    80%,
+    to {
+        width: 40px;
+        height: 40px;
+        transform: translate(48px, 0);
+    }
+}
+
+.progress-loader {
+    margin-top: 180px;
+    position: absolute;
+}
+
+.progress-loader {
+    width: 150px;
+    background: rgba(236, 236, 238, 0.253);
+    height: 6px;
+    border-radius: 7px;
+}
+
+.progress {
+    content: '';
+    width: 1px;
+    height: 6px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    animation: loading1274 4s ease forwards;
+}
+
+@keyframes loading1274 {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 70%;
+    }
+
     100% {
-        background-position: 50% -20px, -20px 50%, 60px 50%, 50% 60px, 50%, 50%, 50%;
+        width: 100%;
     }
 }
 
