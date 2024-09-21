@@ -141,14 +141,14 @@
     <header class="header animate__animated animate__fadeInDown delay-4300ms">
       <img src="assets/img/logo.png" alt="logo" class="logo">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="../blog/index.html">Blogs</a></li>
-        <li><a href="../next_music_login/index.html">Music</a></li>
-        <li><a href="../project/index.html">Projects</a></li>
+        <li><a href="https://sachicodex.github.io">Home</a></li>
+        <li><a href="https://sachicodex.github.io/blog">Blogs</a></li>
+        <li><a href="https://sachicodex.github.io/nextmusic">Music</a></li>
+        <li><a href="https://sachicodex.github.io/project">Projects</a></li>
         <li><a href="https://wa.me/message/JO6HOPJ4WQJ7C1" target=_blank>Contact</a></li>
       </ul>
       <button class="btn"
-        onclick="window.location.href='https://sachicodex.github.io/next_music_login/index.html'">Download</button>
+        onclick="window.location.href='https://sachicodex.github.io/nextmusic/download'">Download</button>
 
       <nav>
         <input type="checkbox" id="slidebar-active">
@@ -171,10 +171,10 @@
 
           <img src="assets/img/logo.png" class="logo"><br><br><br>
 
-          <a href="index.html">Home</a><br><br>
-          <a href="../blog/index.html">Blogs</a><br><br>
-          <a href="../music/index.html">Music</a><br><br>
-          <a href="../services/index.html">Projects</a><br><br>
+          <a href="https://sachicodex.github.io">Home</a><br><br>
+          <a href="https://sachicodex.github.io/blog">Blogs</a><br><br>
+          <a href="https://sachicodex.github.io/nextmusic">Music</a><br><br>
+          <a href="https://sachicodex.github.io/project">Projects</a><br><br>
           <a href="https://wa.me/message/JO6HOPJ4WQJ7C1" target=_blank>Contact</a>
         </div>
       </nav>
@@ -232,25 +232,33 @@
               life and create something outstanding! </p>
             <button class="btn1" onclick="window.open('https://wa.me/message/JO6HOPJ4WQJ7C1')"> Let chat us</button>
           </div>
+
           <div class="youtube" class="animated-section" data-aos="fade-up">
-            <center><img src="assets/img/youtube.png"></center>
-            <p>I have two YouTube channels Code x Master and Smart Gura Music. C x M analyzes the latest technology to
-              enhance your knowledge and Smart Gura Music YouTube channel provides copyright free background music for
-              your YouTube videos. Subscribe us to discover the latest trends, tips and tricks to improve your YouTube
-              experience. Whether you are a video enthusiast or new to the platform, I won't forget to keep you covered
-              with essential insights and updates. Join us as we explore the evolution of YouTube and its profound
-              impact on modern digital culture.</p>
-            <button class="btn2" onclick="window.open('http://bit.ly/⇄youtube')">Subscribe</button>
+          <center>
+            <img src="assets/img/youtube.png" alt="YouTube Logo">
+          </center>
+          <p>Discover the world of coding and technology with Code x Master, your ultimate guide. It helps you learn coding from scratch or improve your existing skills efficiently. Need copyright-free background music for your YouTube videos? Look no further than Smart Gura Music. Whether you're creating tutorials, vlogs, or gaming content, we've got the perfect soundtrack to elevate your videos. Explore our collection and find the ideal music for your project today. Subscribe to both channels for expert coding tips, technical insights, music, and creative inspiration.</p>
+          <button class="btn2" onclick="openPopup()">Subscribe</button>
+
+          <div id="popup" class="popup">
+            <div class="popup-content">
+                <p style="font-family: 'fredoka'; font-weight: 600;">Which channel would you like to subscribe to?</p>
+                <button class="popup-btn2" onclick="window.open('http://bit.ly/⇄YouTube')">Code x Master</button>
+                <button class="popup-btn2" onclick="window.open('http://bit.ly/⇄youtube')">Smart Gura Music</button>
+                <button class="close-btn" onclick="closePopup()" style="font-family: 'fredoka'; font-weight: 550;">X</button>
+            </div>
           </div>
+          </div>
+
           <div class="tiktok" class="animated-section" data-aos="fade-up-left">
             <center><img src="assets/img/tiktok.png"></center>
             <p>TikTok is a globally renowned platform for content creation and I am happy to connect with you through my
               TikTok account. I create interesting videos and often base my videos on questions and comments from
               viewers. So if you have any interesting or pressing questions, please leave them in the comments section.
-              Your feedback - whether positive or constructive - is always welcome and helps me improve. Feel free to
-              let me know how I can assist you with any of your technical projects. Don't forget to follow me on TikTok
+              Your feedback whether positive or constructive is always welcome and helps me improve. Feel free to
+              let me know how I can assist you with any of your technical projects. Don't forget to follow Code x Master on TikTok
               to stay updated and join the fun!</p>
-            <button class="btn3" onclick="window.open('')">Follow us</button>
+            <button class="btn3" onclick="window.open('https://bit.ly/⇄tiktok')">Follow us</button>
           </div>
         </div>
       </div>
@@ -405,36 +413,36 @@
             <div class="hide"></div>
             <div class="column-2">
               <h4>Social Media</h4>
-              <p onclick="window.open('http://bit.ly/⇄youtube')">YouTube</p>
-              <p onclick="window.open('#')">Facebook</p>
-              <p onclick="window.open('#')">TikTok</p>
+              <p onclick="window.open('http://bit.ly/⇄YouTube')">YouTube</p>
+              <p onclick="window.open('http://bit.ly/⇄facebook')">Facebook</p>
+              <p onclick="window.open('https://bit.ly/⇄tiktok')">TikTok</p>
               <p onclick="window.open('https://wa.me/message/JO6HOPJ4WQJ7C1')">WhatsApp</p>
-              <p onclick="window.open('#')">LinkedIn</p>
+              <p onclick="window.open('https://www.linkedin.com/in/sachintha-lakshan-dev')">LinkedIn</p>
             </div>
             <div class="column-3">
               <h4>Next Music</h4>
-              <P onclick="window.open('#')">What's New</P>
-              <p onclick="window.open('#')">Features</p>
-              <p onclick="window.open('#')">How Use</p>
-              <p onclick="window.open('#')">Download</p>
-              <p onclick="window.open('#')">FAQ's</p>
+              <P onclick="window.open('https://sachicodex.github.io/nextmusic')">What's New</P>
+              <p onclick="window.open('https://sachicodex.github.io/nextmusic')">Features</p>
+              <p onclick="window.open('https://sachicodex.github.io/nextmusic')">How Use</p>
+              <p onclick="window.open('https://sachicodex.github.io/nextmusic/download')">Download</p>
+              <p onclick="window.open('https://sachicodex.github.io/nextmusic')">FAQ's</p>
 
             </div>
             <div class="column-4">
               <h4>Quick Links</h4>
-              <p onclick="window.open('#')">Home Page</p>
-              <p onclick="window.open('#')">Blog Page</p>
-              <p onclick="window.open('#')">Music Page</p>
-              <p onclick="window.open('#')">Project Page</p>
-              <p onclick="window.open('#')">Contact Page</p>
+              <p onclick="window.open('https://sachicodex.github.io')">Home Page</p>
+              <p onclick="window.open('https://sachicodex.github.io/blog')">Blog Page</p>
+              <p onclick="window.open('https://sachicodex.github.io/nextmusic')">Music Page</p>
+              <p onclick="window.open('https://sachicodex.github.io/project')">Project Page</p>
+              <p onclick="window.open('https://wa.me/message/JO6HOPJ4WQJ7C1')">Contact Page</p>
             </div>
             <div class="column-5">
               <h4>Education</h4>
-              <p onclick="window.open('#')">GitHub Pages</p>
-              <p onclick="window.open('#')">Fiverr Pages</p>
-              <p onclick="window.open('#')">E-Mail Services</p>
-              <p onclick="window.open('#')">Figma Tutorials</p>
-              <p onclick="window.open('#')">Hack The Box</p>
+              <p onclick="window.open('https://github.com/sachicodex')">GitHub Pages</p>
+              <p onclick="window.open('https://www.fiverr.com/codexmasterlk')">Fiverr Pages</p>
+              <p onclick="window.open('hello.sachinthalakshan@proton.me')">Proton services</p>
+              <p onclick="window.open('https://www.figma.com/')">Figma Tutorials</p>
+              <p onclick="window.open('https://www.hackthebox.com')">Hack The Box</p>
             </div>
           </div>
         </div>

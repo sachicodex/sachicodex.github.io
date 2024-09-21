@@ -447,7 +447,6 @@ nav li {
     padding: 30px;
     border: 3px solid #6B6B6B;
     background: rgba(56, 17, 59, 0.18);
-    ;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -507,6 +506,52 @@ nav li {
     background-origin: padding-box, border-box;
 }
 
+.popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 40px;
+}
+
+.popup-content {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 300px;
+    margin: auto;
+}
+
+.popup .close-btn {
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup .close-btn:hover {
+    background-color: rgba(255, 0, 0, 0);
+    border: 2px solid red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .social-box .btn3 {
     width: 185px;
     height: 45px;
@@ -525,6 +570,29 @@ nav li {
     background:
         linear-gradient(to left, #0e112f, #0e112f),
         linear-gradient(to right, #00FFA3, #002B99);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+.popup-btn2 {
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border-radius: 60px;
+    margin: auto;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: 500;
+    border: 3.2px solid transparent;
+    border-radius: 60px;
+    background:
+        linear-gradient(to left, #000000, #000000),
+        linear-gradient(to left, #002B99, #00FFA3, #002B99);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
@@ -986,10 +1054,104 @@ input[type="radio"]:checked+label::before {
         font-size: 16px;
     }
 
-    .social-box button {
+    .social-box .btn1,
+    .btn3 {
         width: 140px;
         height: 35px;
     }
+
+
+    .popup {
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 40px;
+    }
+
+    .popup-content {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 300px;
+        margin: auto;
+    }
+
+    .popup .close-btn {
+        border: none;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .popup .close-btn:hover {
+        background-color: rgba(255, 0, 0, 0);
+        border: 2px solid red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .social-box .btn3 {
+        width: 185px;
+        height: 45px;
+        font-size: 18px;
+        color: white;
+        border-radius: 60px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        font-family: var(--main-font);
+        font-weight: 500;
+        border: 3.2px solid transparent;
+        border-radius: 60px;
+        background:
+            linear-gradient(to left, #0e112f, #0e112f),
+            linear-gradient(to right, #00FFA3, #002B99);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
+
+    .popup-btn2 {
+        width: 300px;
+        height: 50px;
+        font-size: 18px;
+        color: white;
+        border-radius: 60px;
+        margin: auto;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        font-family: var(--main-font);
+        font-weight: 500;
+        border: 3.2px solid transparent;
+        border-radius: 60px;
+        background:
+            linear-gradient(to left, #000000, #000000),
+            linear-gradient(to left, #002B99, #00FFA3, #002B99);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
+
 
     .capacities h2 {
         margin-top: 3px;
@@ -1229,7 +1391,8 @@ input[type="radio"]:checked+label::before {
         text-align: center;
     }
 
-    .about button {
+    .social-box .btn1,
+    .btn3 {
         width: 150px;
         height: 34px;
         font-size: 17px;
@@ -1275,7 +1438,7 @@ input[type="radio"]:checked+label::before {
         font-size: 16px;
     }
 
-    .social-box button {
+    .social-box .btn1,.btn3 {
         width: 140px;
         height: 35px;
     }
@@ -1602,7 +1765,8 @@ input[type="radio"]:checked+label::before {
         font-size: 16px;
     }
 
-    .social-box button {
+    .social-box .btn1,
+    .btn3 {
         width: 140px;
         height: 35px;
     }
