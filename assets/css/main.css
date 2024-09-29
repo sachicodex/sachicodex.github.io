@@ -164,20 +164,21 @@ a {
     }
 }
 
-.progress-loader {
-    margin-top: 180px;
-    position: absolute;
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .progress-loader {
-    width: 150px;
+    width: 170px;
+    margin-top: 30px;
     background: rgba(236, 236, 238, 0.253);
     height: 6px;
     border-radius: 7px;
 }
 
 .progress {
-    content: '';
     width: 1px;
     height: 6px;
     border-radius: 7px;
@@ -975,6 +976,19 @@ input[type="radio"]:checked+label::before {
         transition: 0.4s ease-in-out;
     }
 
+    .music-btn{
+        background: none;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid red;
+        border-radius: 60px;
+        color: white;
+        padding: 10px 25px;
+        font-family: 'fredoka';
+        letter-spacing: 1.1px;
+
+    }
+
     .hero {
         align-items: center;
         margin-top: auto;
@@ -1438,7 +1452,8 @@ input[type="radio"]:checked+label::before {
         font-size: 16px;
     }
 
-    .social-box .btn1,.btn3 {
+    .social-box .btn1,
+    .btn3 {
         width: 140px;
         height: 35px;
     }
