@@ -278,6 +278,19 @@ nav li {
     display: none;
 }
 
+.music-btn {
+    background: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid red;
+    border-radius: 60px;
+    color: white;
+    padding: 10px 25px;
+    font-family: 'fredoka';
+    letter-spacing: 1.1px;
+
+}
+
 /* ---------------- Hero section ---------------- */
 
 .hero {
@@ -976,7 +989,7 @@ input[type="radio"]:checked+label::before {
         transition: 0.4s ease-in-out;
     }
 
-    .music-btn{
+    .music-btn {
         background: none;
         font-size: 18px;
         font-weight: 600;
@@ -1682,6 +1695,20 @@ input[type="radio"]:checked+label::before {
         left: -8px;
         z-index: 9;
         transition: 0.4s ease-in-out;
+    }
+
+    .music-btn {
+        background: none;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid red;
+        border-radius: 60px;
+        color: white;
+        padding: 10px 25px;
+        font-family: 'fredoka';
+        letter-spacing: 1.1px;
+        margin-left: -50px;
+
     }
 
     .hero {
