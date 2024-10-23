@@ -316,9 +316,13 @@ nav li {
 
 .hero-gradient {
     position: absolute;
-    margin-top: -700px;
+    background: rgba(0, 0, 0, 0.478);
+    margin: -36% 0% 0% 48%;
+    width: 700px;
+    height: 700px;
     z-index: -1;
-    right: 0;
+    border-radius: 70%;
+    box-shadow: 0px 0px 400px 250px rgba(0, 0, 0, 0.478);
 }
 
 .hero h2 {
@@ -1737,6 +1741,19 @@ input[type="radio"]:checked+label::before {
     .hero img {
         width: 100%;
         display: none;
+    }
+
+    .hero-gradient {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.597);
+        margin: auto;
+        display: block;
+        transform: translateY(-100px);
+        width: 250px;
+        height: 250px;
+        z-index: -1;
+        border-radius: 50%;
+        box-shadow: 0px 0px 400px 250px rgba(0, 0, 0, 0.597);
     }
 
     .hero h2 {
