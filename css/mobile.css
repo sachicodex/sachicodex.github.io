@@ -666,12 +666,12 @@
   font-size: 3vw;
   font-weight: 600;
   text-align: center;
-  margin: 2px 3vw 0px 1vw;
+  margin: 0 3vw 5vh 1vw;
 }
 
 .footer .container{
   width: 98.8vw;
-  height: auto;
+  height: 70%;
   background: rgba(33, 35, 82, 0.325);
   border: 0.35vw solid rgba(187, 71, 213, 0.2);
   border-top-left-radius: 4.7vw;
@@ -693,7 +693,7 @@
 .footer .container .sections{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
 }
 
 .footer .container .sections .section1{
@@ -703,15 +703,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2vh;
 }
 
 .footer .container .sections .section1 h3{
   font-family: 'Outfit';
   color: #FFFFFF;
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 700;
   text-align: left;
-  padding: 3.5vw 0 0 4vw;
+  padding: 3.5vw 0 2vh 4vw;
 }
 
 .footer .container .sections .section1 p{
