@@ -1,5 +1,7 @@
 window.addEventListener('load', () => {
   const loader = document.querySelector('.loader');
+  const progressBar = document.querySelector('.progress');
+  const progressValue = document.querySelector('.progress-value');
   const minLoadTime = 4000;
   const startTime = performance.now();
   const animatedElements = document.querySelectorAll('[data-aos]');
@@ -8,6 +10,14 @@ window.addEventListener('load', () => {
     el.style.transition = 'none';
     el.style.transform = 'translateY(200vh)';
   });
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += 1;
+    progressBar.style.width = `${progress}%`;
+    progressValue.textContent = `${progress}%`;
+    if (progress >= 100) clearInterval(interval);
+  }, minLoadTime / 100);
 
   setTimeout(() => {
     const elapsedTime = performance.now() - startTime;

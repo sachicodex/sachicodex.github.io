@@ -1,9 +1,8 @@
 .loader {
-     margin: auto;
-     padding: 0;
-     display: flex;
-     place-content: center;
-     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
      height: 100dvh;
      width: 100dvw;
      position: fixed;
@@ -91,33 +90,33 @@
          transform: translate(48px, 0);
     }
 }
- .progress-loader {
-     margin-top: 180px;
-     position: absolute;
+
+.progress-loader {
+  margin-top: 25px;
+  position: relative;
+  width: 150px;
+  height: 6px;
+  background: rgba(236, 236, 238, 0.253);
+  border-radius: 7px;
 }
- .progress-loader {
-     width: 150px;
-     background: rgba(236, 236, 238, 0.253);
-     height: 6px;
-     border-radius: 7px;
+
+.progress {
+  height: 6px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  width: 0;
+  transition: width 0.5s;
 }
- .progress {
-     content: '';
-     width: 1px;
-     height: 6px;
-     border-radius: 7px;
-     background: rgb(255, 255, 255);
-     transition: 0.5s;
-     animation: loadAnimate 4s ease forwards;
+
+.progress-value {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FAFAFA;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins";
+  letter-spacing: 1.5px;
 }
- @keyframes loadAnimate {
-     0% {
-         width: 0%;
-    }
-     80% {
-         width: 70%;
-    }
-     100% {
-         width: 100%;
-    }
-}
+
