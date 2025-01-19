@@ -12,10 +12,10 @@
      padding: 0;
      list-style: none;
 }
- img {
-     pointer-events: none;
-     user-select: none;
-     -webkit-user-drag: none;
+img {
+    pointer-events: auto; 
+    user-select: none;
+    -webkit-user-drag: none;
 }
  ::-webkit-scrollbar {
      width: 0.4vw;
@@ -468,6 +468,7 @@
  .social .image img {
      width: 100%;
      height: auto;
+     cursor: pointer;
 }
  .social .image .img1 {
      grid-column: 1/3;

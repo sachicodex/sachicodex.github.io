@@ -151,19 +151,19 @@
           <div class="content">
             <img src="assets/img/logo.png" alt="Logo" class="logo" />
             <ul>
-              <li onclick="">Home</li>
-              <li onclick="">Docs</li>
-              <li onclick="">Projects</li>
-              <li onclick="">Overview</li>
-              <li onclick="">Contact</li>
+              <li onclick="window.open('')">Home</li>
+              <li onclick="window.open('')">Docs</li>
+              <li onclick="window.open('')">Projects</li>
+              <li onclick="window.open('')">Overview</li>
+              <li onclick="window.open('https://sync.short.gy/whatsapp')">Contact</li>
             </ul>
-            <button type="button" onclick="">
+            <button type="button" onclick="window.open('https://sync.short.gy/github')">
               <img src="assets/img/github.png" alt="Github Icon" />GITHUB
             </button>
           </div>
         </header>
         
-        <section class="hero" id="hero">
+        <section class="hero" id="heroD">
           <div class="content">
             <h6 data-aos="flip-up">I am,</h6>
             <h2 data-aos="fade-up">Sachintha</h2>
@@ -193,7 +193,7 @@
 
         </section>
 
-        <section class="about" id="about">
+        <section class="about" id="aboutD">
 
           <div class="men" data-aos="zoom-in">
             <img src="assets/img/3d-men.png" alt="3D Men" />
@@ -215,14 +215,14 @@
               collaborate or need help with a project, feel free to contact me.</p>
               <br/><br/>
 
-            <button type="button" onclick="" class="btn" data-aos="fade-up">
+            <button type="button"  onclick="scrollToSocial()" class="btn" data-aos="fade-up">
               <img src="assets/img/people.png" alt="People Icon" />Find on Social
             </button>
 
           </div>
         </section>
 
-        <section class="chart" id="chart">
+        <section class="chart" id="chartD">
           <div class="content">
             <h2 data-aos="fade-down">Knowledge Recap</h2>
             <p data-aos="fade-down">An insightful overview of my expertise and skills, showcasing growth
@@ -287,24 +287,33 @@
         </section>
 
 
-        <section class="social" id="social">
+        <section class="social" id="socialD">
           <div class="content">
 
             <h2 data-aos="fade-down">Stay connected</h2>
             <p data-aos="fade-down">Let’s build something amazing together and create impactful projects!</p>
 
             <div class="image">
-              <img src="assets/img/linkedin.png" alt="LinkedIn Image" class="img1" data-aos="flip-zoom"/>
-              <img src="assets/img/game.png" alt="Gaming Image" class="img2" data-aos="zoom-out"/>
-              <img src="assets/img/whatsapp.png" alt="WhatsApp Image" class="img3" data-aos="flip-zoom"/>
-              <img src="assets/img/youtube.png" alt="YouTube Image" class="img4" data-aos="flip-zoom"/>
-              <img src="assets/img/tiktok.png" alt="TikTok Image" class="img5" data-aos="flip-zoom"/>
+              <img src="assets/img/twitter.png" alt="Twitter Image" class="img1" data-aos="flip-zoom" 
+              onclick="window.open('https://sync.short.gy/twitter')"/>
+
+              <img src="assets/img/game.png" alt="Gaming Image" class="img2" data-aos="zoom-out" 
+              onclick="window.open('')"/>
+
+              <img src="assets/img/whatsapp.png" alt="WhatsApp Image" class="img3" data-aos="flip-zoom" 
+              onclick="window.open('https://sync.short.gy/whatsapp')"/>
+
+              <img src="assets/img/youtube.png" alt="YouTube Image" class="img4" data-aos="flip-zoom" 
+              onclick="window.open('')"/>
+
+              <img src="assets/img/tiktok.png" alt="TikTok Image" class="img5" data-aos="flip-zoom" 
+              onclick="window.open('https://sync.short.gy/tiktok')" />
             </div>
 
             </div>
           </section>
 
-          <section class="faq" id="faq">
+          <section class="faq" id="faqD">
             <div class="content">
 
               <h2 data-aos="fade-up">FAQ's</h2>
@@ -315,8 +324,8 @@
                   <ul class="accordion">
 
                     <li data-aos="flip-left">
-                      <input type="radio" name="e" id="first" checked />
-                      <label for="first">Do you offer freelance web or app development
+                      <input type="radio" name="e" id="firstD" checked />
+                      <label for="firstD">Do you offer freelance web or app development
                         services?</label>
                       <div class="description">
                         <p><em>Yes, I offer freelance web and app development services, specializing in custom websites and Flutter apps. I work closely with clients to deliver high-quality, tailored solutions that meet your specific needs and goals.</em></p>
@@ -324,16 +333,16 @@
                     </li>
 
                     <li data-aos="flip-left">
-                      <input type="radio" name="e" id="second" />
-                      <label for="second">Can you help with personal projects or just business?</label>
+                      <input type="radio" name="e" id="secondD" />
+                      <label for="secondD">Can you help with personal projects or just business?</label>
                       <div class="description">
                         <p><em>I can help with both personal and business projects. Whether it's a personal app website, or any creative development, I provide tailored solutions to meet your specific needs, ensuring quality and functionality for any project type.</em></p>
                       </div>
                     </li>
 
                     <li data-aos="flip-left">
-                      <input type="radio" name="e" id="third" />
-                      <label for="third">What kind of projects do you work on?</label>
+                      <input type="radio" name="e" id="thirdD" />
+                      <label for="thirdD">What kind of projects do you work on?</label>
                       <div class="description">
                         <p>
                           <em>I work on a variety of projects, including web development, mobile app development using
@@ -349,24 +358,24 @@
                   <ul class="accordion">
 
                     <li data-aos="flip-right">
-                      <input type="radio" name="i" id="fourth" />
-                      <label for="fourth">How long does it take to complete a project?</label>
+                      <input type="radio" name="i" id="fourthD" />
+                      <label for="fourthD">How long does it take to complete a project?</label>
                       <div class="description">
                         <p><em>The time to complete a project depends on its scope and complexity. Simple projects may take a few weeks, while more complex ones can take several months. I provide an estimated timeline after discussing your specific requirements.</em></p>
                       </div>
                     </li>
 
                     <li data-aos="flip-right">
-                      <input type="radio" name="i" id="fifth" />
-                      <label for="fifth">Do you work with teams or only individually?</label>
+                      <input type="radio" name="i" id="fifthD" />
+                      <label for="fifthD">Do you work with teams or only individually?</label>
                       <div class="description">
                         <p><em>I primarily work individually, but I can collaborate with other professionals if a project requires a team effort. This allows me to provide specialized skills and ensure the best outcome for larger or more complex projects.</em></p>
                       </div>
                     </li>
 
                     <li data-aos="flip-right">
-                      <input type="radio" name="i" id="sixth" checked />
-                      <label for="sixth">What do you need from me to get started?</label>
+                      <input type="radio" name="i" id="sixthD" checked />
+                      <label for="sixthD">What do you need from me to get started?</label>
                       <div class="description">
                         <p><em>To get started, I’ll need a clear understanding of your project goals, preferred technologies, budget, and timeline. Any design ideas or features you’d like included will also help in creating a tailored solution for your needs.</em></p>
                       </div>
@@ -379,7 +388,7 @@
             </div>
           </section>
 
-          <section class="footer" id="footer">
+          <section class="footer" id="footerD">
             <div class="content">
 
               <h2 data-aos="fade-down">Let’s<br>Collaborate!</h2>
@@ -396,7 +405,7 @@
                   <h3>Newsletter Signup</h3>
 
                   <div class="input-container">
-                    <input type="email" name="email" id="email" placeholder="Your Email Address">
+                    <input type="email" name="email" id="emailD" placeholder="Your Email Address">
                     <img src="assets/img/person.png" class="icon-left" alt="User Icon">
                     <img src="assets/img/right-arrow.png" class="icon-right" alt="Arrow Icon">
                   </div>
@@ -406,27 +415,27 @@
                 <div class="section2">
                   <h4>Social Media</h4>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/github')">
                     <img src="assets/img/link.png" alt="">
                     <h5>GitHub</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>YouTube</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/facebook')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Facebook</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">
                     <img src="assets/img/link.png" alt="">
                     <h5>WhatsApp</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/twitter')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Twitter ( x )</h5>
                   </div>
@@ -436,27 +445,27 @@
                 <div class="section3">
                   <h4>Recommend</h4>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Privacy</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Politics</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="/assets/img/link.png" alt="">
                     <h5>Agreement</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Encryption </h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Data Sync</h5>
                   </div>
@@ -466,27 +475,27 @@
                 <div class="section4">
                   <h4>Quick Links</h4>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Home</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Docs</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Project</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Overview</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Contact</h5>
                   </div>
@@ -496,27 +505,27 @@
                 <div class="section5">
                   <h4>Developer Tools</h4>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://code.visualstudio.com/docs')">
                     <img src="assets/img/link.png" alt="">
                     <h5>VS Code</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://www.apachefriends.org/docs')">
                     <img src="assets/img/link.png" alt="">
                     <h5>XAMPP</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://docs.docker.com')">
                     <img src="/assets/img/link.png" alt="">
                     <h5>Docker</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://nodejs.org/docs/latest/api')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Node.js</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://docs.flutter.dev')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Flutter SDK</h5>
                   </div>
@@ -542,25 +551,25 @@
             <img src="assets/img/moble-logo.png" alt="Logo" class="logo" />
 
             <ul>
-              <li onclick="">Home</li>
-              <li onclick="">Docs</li>
-              <li onclick="">Projects</li>
-              <li onclick="">Overview</li>
-              <li onclick="">Contact</li>
+              <li onclick="window.open('')">Home</li>
+              <li onclick="window.open('')">Docs</li>
+              <li onclick="window.open('')">Projects</li>
+              <li onclick="window.open('')">Overview</li>
+              <li onclick="window.open('https://sync.short.gy/whatsapp')">Contact</li>
             </ul>
 
-            <button type="button" onclick="" class="github">
+            <button type="button" onclick="window.open('https://sync.short.gy/github')" class="github">
               <img src="assets/img/github.png" alt="Github Icon" />
             </button>
 
-            <button type="button" onclick="" class="menu" id="menu">
+            <button type="button" onclick="window.open('')" class="menu" id="menuM">
               <img src="assets/img/menu.png" alt="Menu Icon" />
             </button>
 
           </div>
         </header>
 
-        <section class="hero" id="hero">
+        <section class="hero" id="heroM">
           <div class="content">
 
             <div class="woman" data-aos="fade">
@@ -586,7 +595,7 @@
           </div>
         </section>
 
-        <section class="about" id="about">
+        <section class="about" id="aboutM">
           <div class="container">
 
             <div class="rocket" data-aos="fade-up">
@@ -597,7 +606,7 @@
               <h2 data-aos="fade-up">ABOUT ME</h2>
               <p data-aos="fade-up">I am Sachintha Lakshan ! I am currently working in Dasgiriya, located in the Matale District of Sri Lanka. A professional Web Developer, Graphic Designer, UI/UX Designer, and Video Editor with one year of experience in the industry. I specialize in building responsive, user-friendly websites and creating visually appealing designs. I am comfortable working with tools like Visual Studio Code, Android Studio and Adobe products. Not only that I code in languages like HTML, CSS, JavaScript, PHP, Dart, Flutter and Python. I am also into Mobile App Development and coding is my true passion. Always up for new and exciting challenges! If you are looking to collaborate or need help with a project, feel free to contact me.</p>
 
-              <button type="button" onclick="" class="btn" data-aos="fade-up">
+              <button type="button" onclick="scrollToSocial()" class="btn" data-aos="fade-up">
                 <img src="assets/img/people.png" alt="People Icon" />Find on Social
               </button>
 
@@ -605,7 +614,7 @@
           </div>
         </section>
 
-        <section class="chart" id="chart">
+        <section class="chart" id="chartM">
           <div class="content">
             <h2 data-aos="fade-up">Knowledge Recap</h2>
             <div class="chart-wrapper">
@@ -642,7 +651,7 @@
 
                 </div>
 
-                <div id="tooltip" class="tooltip">
+                <div id="tooltipM1" class="tooltip">
                   <div class="tooltip-text">Percentage</div>
                   <div class="tooltip-arrow"></div>
                 </div>
@@ -685,7 +694,7 @@
 
                 </div>
 
-                <div id="tooltip" class="tooltip">
+                <div id="tooltipM2" class="tooltip">
                   <div class="tooltip-text">Percentage</div>
                   <div class="tooltip-arrow"></div>
                 </div>
@@ -696,7 +705,7 @@
           </div>
         </section>
 
-        <section class="social" id="social">
+        <section class="social" id="socialM">
           <div class="content">
 
             <h2 data-aos="fade-up">Stay connected</h2>
@@ -704,17 +713,21 @@
             <div class="image">
               <div class="media">
 
-                <img src="assets/img/linkedin.png" alt="LinkedIn Image" class="left" data-aos="flip-zoom"/>
-                <img src="assets/img/whatsapp.png" alt="WhatsApp Image" class="right" data-aos="flip-zoom"/>
+                <img src="assets/img/twitter.png" alt="Twitter Image" class="left" data-aos="flip-zoom" onclick="window.open('https://sync.short.gy/twitter')"/>
+
+                <img src="assets/img/whatsapp.png" alt="WhatsApp Image" class="right" data-aos="flip-zoom" onclick="window.open('https://sync.short.gy/whatsapp')"/>
 
               </div>
 
-              <img src="assets/img/game.png" alt="Gaming Image" class="center" data-aos="zoom-out"/>
+              <img src="assets/img/game.png" alt="Gaming Image" class="center" data-aos="zoom-out" 
+              onclick="window.open('')"/>
 
               <div class="media">
 
-                <img src="assets/img/youtube.png" alt="YouTube Image" class="left" data-aos="flip-zoom"/>
-                <img src="assets/img/tiktok.png" alt="TikTok Image" class="right" data-aos="flip-zoom"/>
+                <img src="assets/img/youtube.png" alt="YouTube Image" class="left" data-aos="flip-zoom" onclick="window.open('')"/>
+
+                <img src="assets/img/tiktok.png" alt="TikTok Image" class="right" data-aos="flip-zoom" 
+                onclick="window.open('https://sync.short.gy/tiktok')"/>
 
               </div>
 
@@ -723,7 +736,7 @@
           </div>
         </section>
 
-        <section class="faq" id="faq">
+        <section class="faq" id="faqM">
           <div class="content">
 
             <h2 data-aos="fade-up">FAQ's</h2>
@@ -788,7 +801,7 @@
           </div>
         </section>
 
-        <section class="footer" id="footer">
+        <section class="footer" id="footerM">
           <div class="content">
             <h2 data-aos="fade-up">Let’s<br>Collaborate!</h2>
             <p data-aos="fade-up">I’m always excited to work on innovative projects. Let’s connect and create something amazing!</p>
@@ -801,7 +814,7 @@
 
                 <h3>Newsletter Signup</h3>
                 <div class="input-container">
-                  <input type="email" name="email" id="email" placeholder="Your Email Address">
+                  <input type="email" name="email" id="emailM" placeholder="Your Email Address">
                   <img src="assets/img/person.png" class="icon-left" alt="User Icon">
                   <img src="assets/img/right-arrow.png" class="icon-right" alt="Arrow Icon">
                 </div>
@@ -813,27 +826,27 @@
 
                   <h4>Social Media</h4>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/github')">
                     <img src="assets/img/link.png" alt="">
                     <h5>GitHub</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
                     <h5>YouTube</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/facebook')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Facebook</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">
                     <img src="assets/img/link.png" alt="">
                     <h5>WhatsApp</h5>
                   </div>
 
-                  <div class="link" onclick="">
+                  <div class="link" onclick="window.open('https://sync.short.gy/twitter')">
                     <img src="assets/img/link.png" alt="">
                     <h5>Twitter ( x )</h5>
                   </div>
@@ -844,27 +857,27 @@
 
                   <h4>Recommend</h4>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Privacy</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Politics</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="/assets/img/link.png" alt="">
                       <h5>Agreement</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Encryption </h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Data Sync</h5>
                     </div>
@@ -877,27 +890,27 @@
 
                   <h4>Quick Links</h4>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Home</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Docs</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Project</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Overview</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Contact</h5>
                     </div>
@@ -908,27 +921,27 @@
 
                   <h4>Developer Tools</h4>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://code.visualstudio.com/docs')">
                       <img src="assets/img/link.png" alt="">
                       <h5>VS Code</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://www.apachefriends.org/docs')">
                       <img src="assets/img/link.png" alt="">
                       <h5>XAMPP</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://docs.docker.com')">
                       <img src="/assets/img/link.png" alt="">
                       <h5>Docker</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://nodejs.org/docs/latest/api')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Node.js</h5>
                     </div>
 
-                    <div class="link" onclick="">
+                    <div class="link" onclick="window.open('https://docs.flutter.dev')">
                       <img src="assets/img/link.png" alt="">
                       <h5>Flutter SDK</h5>
                     </div>
