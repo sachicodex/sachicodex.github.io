@@ -147,7 +147,7 @@
 
       <div class="desktop">
 
-        <header>
+        <header data-aos="fade">
           <div class="content">
             <img src="assets/img/logo.png" alt="Logo" class="logo" />
             <ul>
@@ -297,8 +297,8 @@
               <img src="assets/img/twitter.png" alt="Twitter Image" class="img1" data-aos="flip-zoom" 
               onclick="window.open('https://sync.short.gy/twitter')"/>
 
-              <img src="assets/img/game.png" alt="Gaming Image" class="img2" data-aos="zoom-out" 
-              onclick="window.open('')"/>
+              <img src="assets/img/social.jpg" alt="All Social Image" class="img2" data-aos="zoom-out" 
+              onclick="window.open('')">
 
               <img src="assets/img/whatsapp.png" alt="WhatsApp Image" class="img3" data-aos="flip-zoom" 
               onclick="window.open('https://sync.short.gy/whatsapp')"/>
@@ -546,26 +546,37 @@
       <div class="mobile">
 
         <header>
-          <div class="content">
+          <div class="menu">
 
-            <img src="assets/img/moble-logo.png" alt="Logo" class="logo" />
-
-            <ul>
-              <li onclick="window.open('')">Home</li>
-              <li onclick="window.open('')">Docs</li>
-              <li onclick="window.open('')">Projects</li>
-              <li onclick="window.open('')">Overview</li>
-              <li onclick="window.open('https://sync.short.gy/whatsapp')">Contact</li>
-            </ul>
-
-            <button type="button" onclick="window.open('https://sync.short.gy/github')" class="github">
-              <img src="assets/img/github.png" alt="Github Icon" />
+            <button type="button" onclick="openNav()">
+              <img src="assets/img/menu.png" alt="Menu Icon"/>
             </button>
 
-            <button type="button" onclick="window.open('')" class="menu" id="menuM">
-              <img src="assets/img/menu.png" alt="Menu Icon" />
-            </button>
+            <nav id="nav">
+              <div class="content">
 
+                <div class="first">
+                  <img src="assets/img/logo.png" alt="" class="logo">
+                  <button type="button" onclick="closeNav()">
+                    <img src="assets/img/close.png" alt="Close Icon" class="close"/>
+                  </button>
+                </div>
+
+                <div class="items">
+                  <p>Home</p>
+                  <p>Docs</p>
+                  <p>Project</p>
+                  <p>Overview</p>
+                  <p>Contact</p>
+                  <div class="buttons">
+                    <button type="button" onclick="window.open('https://sync.short.gy/github')" class="github">
+                      <img src="assets/img/github.png" alt="Github Icon" />GITHUB
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </nav>
           </div>
         </header>
 
@@ -719,8 +730,7 @@
 
               </div>
 
-              <img src="assets/img/game.png" alt="Gaming Image" class="center" data-aos="zoom-out" 
-              onclick="window.open('')"/>
+                <img src="assets/img/social.jpg" alt="All Social Image" class="center" data-aos="zoom-out" onclick="window.open('')">
 
               <div class="media">
 
