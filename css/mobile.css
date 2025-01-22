@@ -160,7 +160,7 @@
     background: linear-gradient(180deg, #06006f, #020024);
     font-family: "Outfit";
     color: #ffffff;
-    font-size: clamp(15px, 7vw, 25px);
+    font-size: clamp(10px, 7vw, 20px);
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -172,9 +172,17 @@
     padding: 10px 40px;
   }
 
+  .mobile header .menu .menu-btn {
+    background: transparent;
+  }
+
+  .mobile header .menu-btn img{
+    opacity: 0.7;
+  }
+
   .mobile header .items button img {
     width: 10vw;
-    max-width: 40px;
+    max-width: 30px;
     height: auto;
   }
 
