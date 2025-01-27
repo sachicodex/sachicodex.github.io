@@ -58,16 +58,17 @@
     width: 100%;
   }
 
-  .mobile header .menu button {
+  .mobile header .menu .menu-btn {
     width: auto;
     height: auto;
-    background: linear-gradient(180deg, #06006F, #020024);
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     border-radius: 50%;
     padding: 2vw;
+    margin-top: 20px;
     cursor: pointer;
     position: relative;
   }
@@ -94,7 +95,7 @@
     z-index: 999;
   }
 
-  .mobile header nav .first {
+  .mobile header nav .content .first {
     margin-top: 2dvh;
     display: flex;
     flex-direction: row;
@@ -103,19 +104,21 @@
     width: 100%;
   }
 
-  .mobile header nav .first .logo {
+  .mobile header nav .content .first .logo {
     width: 50vw;
     max-width: 250px;
     height: auto;
     margin-left: 3dvw;
   }
 
-  .mobile header nav .first img .close {
+  .mobile header nav .content .first img .close {
     width: 10dvw;
     height: auto;
   }
 
-  .mobile header .content button {
+  .mobile header .content .first button {
+    width: auto;
+    height: auto;
     background: linear-gradient(180deg, #06006F, #020024);
     display: flex;
     justify-content: center;
@@ -124,66 +127,23 @@
     border-radius: 50%;
     cursor: pointer;
     position: relative;
+    padding: 1.5em;
   }
 
-  .mobile header .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2dvh;
-  }
-
-  .mobile header .items {
-    margin-top: 5dvh;
-    width: 80%;
-    font-family: 'Dm Sans';
-    font-size: clamp(15px, 7vw, 25px);
-    font-weight: 600;
-  }
-
-  .mobile header .items p {
-    margin-bottom: 2dvh;
-  }
-
-  .mobile header .items .buttons {
+  .mobile header nav .content .items{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 5dvh;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: clamp(10px, 10vw, 20px);
+    color: #e6e6ff;
+    margin-top: 4dvh;
   }
 
-  .mobile header .items button {
-    width: 60vw;
-    max-width: 300px;
-    height: 20dvh;
-    max-height: 60px;
-    background: linear-gradient(180deg, #06006f, #020024);
-    font-family: "Outfit";
-    color: #ffffff;
-    font-size: clamp(10px, 7vw, 20px);
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    gap: 5vw;
-    align-items: center;
-    border: none;
-    border-radius: 40vw;
-    cursor: pointer;
-    padding: 10px 40px;
-  }
-
-  .mobile header .menu .menu-btn {
-    background: transparent;
-  }
-
-  .mobile header .menu-btn img{
-    opacity: 0.7;
-  }
-
-  .mobile header .items button img {
-    width: 10vw;
-    max-width: 30px;
-    height: auto;
+  .mobile header nav .content .items li{
+    background: #000033;
+    margin: 0 1em 2.5dvh 1em;
+    padding: 6px 10dvw;
+    border-radius: 0.7em;
   }
 
   /* Hero Section */
@@ -214,12 +174,17 @@
   }
 
   .mobile .hero .content h2 {
+    width: 100%;
     font-family: 'codex';
     font-size: clamp(20px, 10vw, 60px);
-    font-weight: 600;
-    background: linear-gradient(to right, #F80000, #FFFF00);
     background-clip: text;
-    color: transparent;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1.7em / 16);
+    -webkit-background-clip: text;
+    color: #00001c;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center; 
   }
 
   .mobile .hero .content p {
