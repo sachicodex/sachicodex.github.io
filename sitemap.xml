@@ -4,13 +4,40 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://sachicodex.github.io/</loc>
   <lastmod>2025-02-10T05:07:13+00:00</lastmod>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
 </url>
 
+<url>
+  <loc>https://sachicodex.github.io/docs/</loc>
+  <lastmod>2024-10-26T10:00:00+00:00</lastmod>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://sachicodex.github.io/projects/</loc>
+  <lastmod>2024-11-15T12:00:00+00:00</lastmod>
+  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://sachicodex.github.io/overview/</loc>
+  <lastmod>2024-12-01T14:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://sachicodex.github.io/contact/</loc>
+  <lastmod>2025-01-10T16:00:00+00:00</lastmod>
+  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+</url>
 
 </urlset>

@@ -74,6 +74,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
+  <!--Rubik-->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/preloader.css" />
   <link rel="stylesheet" href="css/desktop.css" />
@@ -151,11 +153,26 @@
           <div class="content" id="content">
             <img src="assets/img/logo.png" alt="Logo" class="logo" />
             <ul>
-              <li onclick="window.open('')">Home</li>
-              <li onclick="window.open('')">Docs</li>
-              <li onclick="window.open('')">Projects</li>
-              <li onclick="window.open('')">Overview</li>
-              <li onclick="window.open('https://sync.short.gy/whatsapp')">Contact</li>
+              <li style="--i:#ff9800;--j:#ffc107">
+                <span class="icon"><img src="/assets/img/home.png"></span>
+                <span class="title"><img src="/assets/img/home.png">Home</span>
+              </li>
+              <li style="--i:#1565c0;--j:#42a5f5">
+                <span class="icon"><img src="/assets/img/document.png"></span>
+                <span class="title"><img src="/assets/img/document.png">Docs</span>
+              </li>
+              <li style="--i:#FF512F;--j:#F09819">
+                <span class="icon"><img src="/assets/img/folder.png"></span>
+                <span class="title"><img src="/assets/img/folder.png">Projects</span>
+              </li>
+              <li style="--i:#7b1fa2;--j:#9c27b0">
+                <span class="icon"><img src="/assets/img/pie-chart.png"></span>
+                <span class="title"><img src="/assets/img/pie-chart.png">Dev Info</span>
+              </li>
+              <li style="--i:#388e3c;--j:#66bb6a" onclick="window.open('https://sync.short.gy/whatsapp')">
+                <span class="icon"><img src="/assets/img/chat.png"></span>
+                <span class="title"><img src="/assets/img/chat.png">Contact</span>
+              </li>
             </ul>
             <button type="button" onclick="window.open('https://sync.short.gy/github')">
               <img src="assets/img/github.png" alt="Github Icon" />GITHUB
@@ -492,7 +509,7 @@
 
                   <div class="link" onclick="window.open('')">
                     <img src="assets/img/link.png" alt="">
-                    <h5>Overview</h5>
+                    <h5>Dev Info</h5>
                   </div>
 
                   <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">
@@ -566,7 +583,7 @@
                   <li>Home</li>
                   <li>Docs</li>
                   <li>Projects</li>
-                  <li>Overview</li>
+                  <li>Dev Info</li>
                   <li onclick="window.open('https://sync.short.gy/whatsapp')">Contact</li>
                   <!-- <div class="buttons">
                     <button type="button" onclick="window.open('https://sync.short.gy/github')" class="github">
@@ -917,7 +934,7 @@
 
                     <div class="link" onclick="window.open('')">
                       <img src="assets/img/link.png" alt="">
-                      <h5>Overview</h5>
+                      <h5>Dev Info</h5>
                     </div>
 
                     <div class="link" onclick="window.open('https://sync.short.gy/whatsapp')">

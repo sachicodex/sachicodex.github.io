@@ -66,6 +66,7 @@ section {
 }
 
 /* Header Section */
+/* Header Section */
 header {
   display: flex;
   justify-content: center;
@@ -87,18 +88,18 @@ header .content {
   z-index: 998;
 }
 
-@media (min-width : 768px){
+@media (min-width: 768px) {
   header .content {
-  opacity: 0; 
-  transform: translateY(-50px); 
-  transition: opacity 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, 
-              transform 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s,
+      transform 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
   }
 
   header .content.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 header .logo {
@@ -113,11 +114,137 @@ header ul {
 }
 
 header ul li {
-  font-family: "Outfit";
-  color: #e6e6ff;
-  font-size: 1.5vw;
-  font-weight: 600;
+  font-family: "Rubik";
+  position: relative;
+  list-style: none;
+  width: 5vw;
+  height: 2.6vw;
+  background: transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+header ul li::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  transition: 0.5s;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0;
+}
+
+header ul li:hover {
+  width: 12vw;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+header ul li:hover::before {
+  opacity: 1;
+}
+
+header ul li:hover::after {
+  opacity: 0.5;
+}
+
+header ul li img {
+  color: #f5f6ff;
+  width: 2vw;
+  height: auto;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+header ul li:hover img {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+header ul li span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header ul li .title {
+  font-size: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+header ul li .title img {
+  scale: 0.7;
+  transform: rotate(0deg);
+  transition: 0.5s;
+  transition-delay: 0s;
+  margin-right: 0.3vw;
+  z-index: 10;
+}
+
+header ul li:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+header ul li:hover .title img {
+  scale: 0.7;
+  transform: rotate(360deg);
+  transition-delay: 0.35s;
+}
+
+header ul li.active-item {
+  width: 12vw;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+header ul li.active-item::before {
+  opacity: 1;
+}
+
+header ul li.active-item::after {
+  opacity: 0;
+}
+
+header ul li.active-item img {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+header ul li.active-item .title {
+  transform: scale(1);
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+header ul li.active-item .title img {
+  transform: rotate(360deg);
+  transition: 0.5s;
+  transition-delay: 0.35s;
 }
 
 header button {
@@ -141,6 +268,7 @@ header button img {
   width: 2vw;
   height: auto;
 }
+
 
 /* Hero Section */
 .hero {

@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://sachicodex.github.io/sitemap.xml
