@@ -961,7 +961,7 @@ header button svg {
   background: linear-gradient(180deg, #00012b, rgb(22, 0, 30));
   border-radius: 2vw;
   padding: 1.3vw;
-  box-shadow: 0px 0px 0.8em rgba(234, 238, 255, 0.785);
+  box-shadow: 0px 0px 0.8em rgba(149, 161, 225, 0.785);
   margin: 1.5em 2vw;
 }
 
