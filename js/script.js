@@ -50,3 +50,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var app = document.getElementById('typewriter');
+
+  var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 100,
+    cursorClassName: '',
+    cursor: '|',
+  });
+
+  typewriter
+    .typeString('WEBDEV')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('DESIGNER')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('SOFTDEV')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('SELFPRO')
+    .pauseFor(2500)
+    .start();
+});
