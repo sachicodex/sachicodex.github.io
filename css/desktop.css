@@ -298,20 +298,56 @@ header button svg {
   z-index: 2;
 }
 
-.hero .content .typewriter {
+.hero .content .text {
+  position: relative;
   width: 100%;
-  font-family: var(--title-font);
+  display: flex;
+}
+
+.hero .content .text p{
   font-size: 5vw;
-  background-image: linear-gradient(90deg, #DD2C00, #ffff00, #00fff2);
-  background-clip: text;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: calc(1.4em / 16);
-  -webkit-background-clip: text;
-  color: #00001c;
-  font-weight: 700;
-  padding: calc(1.4em / 16);
-  letter-spacing: 1vw;
-  text-align: center;
+  font-family: 'Open Sans';
+}
+
+.hero .content .text .word {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  margin-left: .8vw;
+  font-size: 5vw;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.wisteria {
+  color: #8e44ad;
+  text-shadow: 0 0 .7em #8e44ad, 0 0 0px #8e44ad, 0 0 0px #8e44ad;
+}
+
+.belize {
+  color: #007BFF;
+  text-shadow: 0 0 2em #007BFF, 0 0 0px #007BFF, 0 0 0px #007BFF;
+}
+
+.pomegranate {
+  color: #c0392b;
+  text-shadow: 0 0 1em #c0392b, 0 0 0px #c0392b, 0 0 0px #c0392b;
+}
+
+.green {
+  color: #05c766;
+  text-shadow: 0 0 .6em #05c766, 0 0 0px #05c766, 0 0 0px #05c766;
+}
+
+.midnight {
+  color: #0eb1b1;
+  text-shadow: 0 0 .9em #0eb1b1, 0 0 0px #0eb1b1, 0 0 0px #0eb1b1;
 }
 
 .hero .content p {
@@ -323,11 +359,15 @@ header button svg {
   background: linear-gradient(180deg, #f7f1ff, #dfcee1);
   background-clip: text;
   margin-bottom: 0.4vw;
-  text-align: center;
+  text-align: justify;
+}
+
+.hero .content .sized{
+  width: 92%;
 }
 
 .hero .content .buttons {
-  width: 100%;
+  width: 92%;
   display: flex;
   justify-content: space-evenly;
 }
