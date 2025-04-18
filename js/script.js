@@ -50,3 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Apply border-radius to clicked FAQ
+document.querySelectorAll('.mobile .faq .accordion li').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.mobile .faq .accordion li').forEach(li => li.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+window.addEventListener('DOMContentLoaded', () => {
+  const defaultActiveItem = document.querySelector('.mobile .faq .accordion li.default-active');
+  if (defaultActiveItem) {
+    defaultActiveItem.classList.add('active');
+  }
+});

@@ -1,13 +1,13 @@
 @media (max-width: 767px) {
   @font-face {
-    font-family: 'codex';
+    font-family: "codex";
     src: url(/assets/fonts/ethnocentric.otf);
   }
 
   :root {
-    --primary-text-color: #EEF0FF;
-    --title-color: linear-gradient(180deg, #E9E5FA, #CBBEFF);
-    --title-font: 'codex';
+    --primary-text-color: #eef0ff;
+    --title-color: linear-gradient(180deg, #e9e5fa, #cbbeff);
+    --title-font: "codex";
   }
 
   * {
@@ -26,6 +26,12 @@
     outline: none;
   }
 
+  .mobile button{
+    border-radius: 4vw;
+    max-height: 60px;
+    font-size: clamp(8px, 3.5vw, 20px);
+  }
+
   ::-webkit-scrollbar {
     width: 0.4vw;
     background-color: #000014;
@@ -41,9 +47,9 @@
   }
 
   body {
-    background: linear-gradient(to right, #000014, #00001F, #00001F, #000014);
+    background: linear-gradient(to right, #000014, #00001f, #00001f, #000014);
     color: var(--primary-text-color);
-    font-family: 'codex';
+    font-family: "codex";
   }
 
   section {
@@ -71,12 +77,15 @@
     margin-top: 20px;
     cursor: pointer;
     position: relative;
+    z-index: 10;
   }
 
-  .mobile header .menu button img {
+  .mobile header .menu button svg {
     width: 7vw;
     max-width: 2rem;
     height: auto;
+    opacity: 0.7;
+    fill: #fff;
   }
 
   .mobile header nav {
@@ -111,15 +120,16 @@
     margin-left: 3dvw;
   }
 
-  .mobile header nav .content .first img .close {
-    width: 10dvw;
+  .mobile header nav .content .first .close {
+    width: 7dvw;
     height: auto;
+    opacity: 0.9;
   }
 
   .mobile header .content .first button {
     width: auto;
     height: auto;
-    background: linear-gradient(180deg, #06006F, #020024);
+    background: linear-gradient(180deg, #06006f, #020024);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,20 +140,25 @@
     padding: 1.5em;
   }
 
-  .mobile header nav .content .items{
+  .mobile header nav .content .items {
     width: 100%;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: clamp(10px, 10vw, 20px);
     color: #e6e6ff;
     margin-top: 4dvh;
   }
 
-  .mobile header nav .content .items li{
+  .mobile header nav .content .items li {
     background: #000033;
     margin: 0 1em 2.5dvh 1em;
     padding: 6px 10dvw;
     border-radius: 0.7em;
+  }
+
+  .mobile header nav .content .items li.active {
+    background: #000034;
+    box-shadow: 0 0 0.38em 0.2em #4d3e8a;
   }
 
   /* Hero Section */
@@ -166,31 +181,39 @@
     align-items: center;
   }
 
-  .mobile .hero .content .woman img {
-    width: 80vw;
-    max-width: 450px;
+  .mobile .hero .content .woman .img1 {
+    width: 90vw;
     height: auto;
-    z-index: 1;
+    z-index: 2;
+    position: absolute;
   }
 
-    .mobile .hero .content h2 {
-  width: 100%;
-  font-family: var(--title-font);
-  font-size: clamp(20px, 10vw, 60px);
-  background-image: linear-gradient(90deg, #DD2C00, #ffff00, #00fff2);
-  background-clip: text;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: calc(1.4em / 16);
-  -webkit-background-clip: text;
-  color: #00001c;
-  font-weight: 700;
-  padding: calc(1.4em / 16);
-  letter-spacing: 1vw;
-  text-align: center;
+  .mobile .hero .content .woman .img2 {
+    width: 90vw;
+    height: auto;
+    z-index: 1;
+    background-image: conic-gradient(from 180deg, rgb(255, 138, 138), rgb(0, 0, 0), #8c00ff, rgb(0, 0, 0));
+    -webkit-filter: blur(100px);
+  }
+
+  .mobile .hero .content h2 {
+    width: 100%;
+    font-family: var(--title-font);
+    font-size: clamp(20px, 10vw, 60px);
+    background-image: linear-gradient(90deg, #dd2c00, #ffff00, #00fff2);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1.4em / 16);
+    -webkit-background-clip: text;
+    color: #00001c;
+    font-weight: 700;
+    padding: calc(1.4em / 16);
+    letter-spacing: 1vw;
+    text-align: center;
   }
 
   .mobile .hero .content p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: var(--primary-text-color);
     font-size: clamp(5px, 3.3vw, 18px);
     font-weight: 600;
@@ -201,49 +224,26 @@
   .mobile .hero .content .buttons {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   .mobile .hero .content .btn {
-    width: 43vw;
-    height: 12vw;
-    max-height: 60px;
-    background: linear-gradient(180deg, #600000, #140000);
-    font-family: 'Inter';
-    color: #FFEBEE;
-    font-size: clamp(8px, 3.5vw, 20px);
-    font-weight: bold;
-    border: none;
-    border-radius: 20vw;
-    cursor: pointer;
     margin-top: 3vh;
+    width: 100%;
+    height: 15vw;
+    font-size: clamp(8px, 4.5vw, 20px);
+    border-radius: 5vw;
+    gap: 3vw;
+    margin-left: 0.85vw;
   }
 
-  .mobile .hero .content .btn-big {
-    width: 100%;
-    height: 12vw;
-    max-height: 55px;
-    background: linear-gradient(180deg, #600000, #140000);
-    font-family: 'Inter';
-    color: #FFEBEE;
-    font-size: clamp(8px, 3.5vw, 20px);
-    font-weight: bold;
-    border: none;
-    border-radius: 20vw;
-    cursor: pointer;
-    margin-top: 2vh;
+  .mobile .hero .content .btn::before {
+    width: 90vw;
+    height: 15vw;
   }
 
   .mobile .hero .content .btn svg {
-    width: 7vw;
-    max-width: 40px;
-    height: auto;
-  }
-
-  @media(min-width: 500px) or (max-height: 450px) {
-    .mobile .hero .content .btn-big {
-      display: none;
-    }
+    width: 8.2vw;
   }
 
   /* About Section */
@@ -279,8 +279,8 @@
   }
 
   .mobile .about .content p {
-    font-family: 'Poppins';
-    color: #E8EAF6;
+    font-family: "Poppins";
+    color: #e8eaf6;
     font-size: clamp(5px, 3vw, 16px);
     font-weight: 600;
     text-align: center;
@@ -288,22 +288,15 @@
   }
 
   .mobile .about .content button {
-    width: 43vw;
-    height: 12vw;
-    max-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    background: linear-gradient(180deg, #600000, #140000);
-    font-family: 'Inter';
-    color: #FFEBEE;
-    font-size: clamp(8px, 3.5vw, 20px);
-    font-weight: bold;
-    border: none;
-    border-radius: 5vw;
-    cursor: pointer;
-    margin-top: 2.5vh;
+    width: 60vw;
+    height: 13vw;
+    margin-top: 3vh;
+    gap: .4em;
+  }
+
+  .mobile .about .content button::before {
+    width: 60vw;
+    height: 13vw;
   }
 
   .mobile .about .content button svg {
@@ -454,7 +447,7 @@
     height: 34dvh;
     padding-right: 7px;
     text-align: left;
-    color: #9B9B9B;
+    color: #9b9b9b;
     font-size: clamp(2px, 4vw, 16px);
     font-weight: 600;
   }
@@ -474,7 +467,7 @@
     text-align: center;
     font-size: clamp(2px, 4vw, 16px);
     font-weight: bold;
-    color: #9B9B9B;
+    color: #9b9b9b;
   }
 
   .mobile .chart .tooltip {
@@ -586,8 +579,8 @@
   }
 
   .mobile .faq .container .accordion label {
-    font-family: 'Poppins';
-    color: #FFFFFF;
+    font-family: "Poppins";
+    color: #ffffff;
     font-size: clamp(6px, 3.56vw, 16px);
     font-weight: 600;
     margin-left: 1vw;
@@ -599,17 +592,17 @@
   }
 
   .mobile .faq .container .accordion label::before {
-    content: '+';
-    font-family: 'Poppins';
-    color: #FFFFFF;
+    content: "+";
+    font-family: "Poppins";
+    color: #ffffff;
     font-size: clamp(6px, 6vw, 20px);
     font-weight: 600;
     margin: 0 1vw;
   }
 
   .mobile .faq .container .accordion .description p {
-    font-family: 'DM Sans';
-    color: #E0E0E0;
+    font-family: "DM Sans";
+    color: #e0e0e0;
     font-size: clamp(6px, 3vw, 14px);
     font-weight: 600;
     line-height: 5vw;
@@ -617,25 +610,29 @@
     max-height: 0px;
     overflow: hidden;
     padding: 0 10px;
-    transition: max-height .8s, padding .8s;
+    transition: max-height 0.8s, padding 0.8s;
   }
 
   .mobile .faq .accordion li {
-    background: #00012B;
-    border-radius: 6vw;
+    background: #00012b;
+    border-radius: 4.5vw;
     padding: 1.3vw;
     margin: 0 1vw 1.5em 1vw;
   }
 
-  .mobile .faq .container .accordion input[type="radio"]:checked+label+.description p {
+  .mobile .faq .accordion li.active {
+    border-radius: 6vw;
+}
+
+  .mobile .faq .container .accordion input[type="radio"]:checked + label + .description p {
     max-height: 400px;
     padding: 2vw;
   }
 
-  .mobile .faq .container .accordion input[type="radio"]:checked+label::before {
-    content: '-';
-    font-family: 'Poppins';
-    color: #FFFFFF;
+  .mobile .faq .container .accordion input[type="radio"]:checked + label::before {
+    content: "-";
+    font-family: "Poppins";
+    color: #ffffff;
     font-size: clamp(6px, 6vw, 20px);
     font-weight: 600;
     margin: 0 1vw;
@@ -668,7 +665,7 @@
   }
 
   .footer .content p {
-    font-family: 'Dm Sans';
+    font-family: "Dm Sans";
     color: var(--primary-text-color);
     font-size: clamp(6px, 4vw, 18px);
     font-weight: 600;
@@ -718,8 +715,8 @@
   }
 
   .footer .container .sections .section1 h3 {
-    font-family: 'Outfit';
-    color: #FFFFFF;
+    font-family: "Outfit";
+    color: #ffffff;
     font-size: clamp(10px, 6.5vw, 25px);
     font-weight: 700;
     text-align: left;
@@ -727,7 +724,7 @@
   }
 
   .footer .container .sections .section1 p {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: #f1f4ff;
     font-size: 3vw;
     font-weight: 600;
@@ -751,14 +748,14 @@
     background: #130040;
     border: 0.3vw solid rgba(19, 0, 115, 0.5);
     border-radius: 3vw;
-    font-family: 'DM Mono';
+    font-family: "DM Mono";
     font-size: clamp(10px, 4vw, 18px);
-    color: #EFEFEF;
+    color: #efefef;
     box-sizing: border-box;
   }
 
   .footer .container .sections .section1 .input-container input::placeholder {
-    color: #EFEFEF;
+    color: #efefef;
     font-weight: 500;
     text-align: center;
   }
@@ -800,7 +797,7 @@
   }
 
   .footer .container .sections h4 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: #fafbfe;
     font-size: clamp(10px, 4vw, 18px);
     text-align: left;
@@ -825,7 +822,7 @@
   }
 
   .footer .container .sections h5 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: #efefef;
     font-size: clamp(10px, 3vw, 16px);
     font-weight: 600;
@@ -838,7 +835,7 @@
       align-items: center;
       justify-content: center;
       color: rgb(207, 210, 255);
-      font-family: 'DM Mono';
+      font-family: "DM Mono";
       font-size: 40px;
       font-weight: bold;
       text-align: center;

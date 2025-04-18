@@ -1,19 +1,70 @@
 @font-face {
-  font-family: "codex";
+  font-family: "default";
   src: url(/assets/fonts/ethnocentric.otf);
 }
 
 :root {
   --primary-text-color: #eef0ff;
   --title-color: linear-gradient(180deg, #e9e5fa, #cbbeff);
-  --title-font: "codex";
-  --btn-gradient: linear-gradient(to bottom, #870000 0%, #190A05 100%, #870000 200%);
+  --title-font: "default";
+  --btn-gradient: linear-gradient(to bottom, #870000 0%, #190a05 100%, #870000 200%);
 }
 
 * {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7vw;
+  font-family: "Exo 2";
+  letter-spacing: 0.07em;
+  color: hsl(270, 20%, 90%);
+  font-size: 1.03vw;
+  font-weight: 700;
+  border: 4px solid hsl(270, 24%, 4%);
+  background-image: linear-gradient(145deg, hsl(270, 39%, 9%), hsl(270, 40%, 26%));
+  border-radius: 1.3vw;
+  box-shadow: inset 0.1em 0.1em 0px hsl(270, 40%, 49%), inset -0.1em -0.1em 0px hsl(270, 40%, 11%);
+  cursor: pointer;
+  text-transform: uppercase;
+  scale: 1;
+  box-shadow: 0px 0px 1.4em transparent;
+  transition: color 0.3s ease-in-out, scale 0.4s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: linear-gradient(145deg, hsl(270, 40%, 15%), hsl(270, 40%, 38%));
+  z-index: -1;
+  box-shadow: 0.4em 0.4em 1em hsl(270, 40%, 8%), -0.4em -0.4em 1em hsl(270, 40%, 32%);
+}
+
+button:hover {
+  scale: 1.03;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 0px 0.8em rgb(134, 114, 235);
+}
+
+button svg {
+  width: 2.7vw;
+  height: auto;
+  fill: hsl(270, 20%, 90%);
+  transition: fill 0.4s ease-in-out;
+}
+
+button:hover svg {
+  fill: #fff;
 }
 
 img {
@@ -53,7 +104,7 @@ html {
 body {
   background: linear-gradient(to right, #000014, #00001f, #00001f, #000014);
   color: var(--primary-text-color);
-  font-family: "codex";
+  font-family: "default";
   overflow-y: hidden;
 }
 
@@ -76,7 +127,6 @@ section {
   scroll-snap-align: start;
 }
 
-/* Header Section */
 /* Header Section */
 header {
   display: flex;
@@ -103,8 +153,7 @@ header .content {
   header .content {
     opacity: 0;
     transform: translateY(-50px);
-    transition: opacity 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s,
-      transform 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    transition: opacity 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, transform 2s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
   }
 
   header .content.active {
@@ -178,7 +227,7 @@ header ul li:hover::after {
 }
 
 header ul li svg {
-  fill: #F2F2FF;
+  fill: #f2f2ff;
   width: 2vw;
   height: auto;
   transition: 0.5s;
@@ -201,7 +250,7 @@ header ul li span {
 header ul li .title {
   font-size: 1vw;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   transform: scale(0);
   transition: 0.5s;
@@ -276,7 +325,7 @@ header button {
 }
 
 header button svg {
-  fill: #F2F2FF;
+  fill: #f2f2ff;
   width: 2vw;
   height: auto;
 }
@@ -304,16 +353,16 @@ header button svg {
   display: flex;
 }
 
-.hero .content .text p{
+.hero .content .text p {
   font-size: 5vw;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 .hero .content .text .word {
   position: absolute;
   width: 100%;
   opacity: 0;
-  margin-left: .8vw;
+  margin-left: 0.8vw;
   font-size: 5vw;
 }
 
@@ -327,12 +376,12 @@ header button svg {
 
 .wisteria {
   color: #8e44ad;
-  text-shadow: 0 0 .7em #8e44ad, 0 0 0px #8e44ad, 0 0 0px #8e44ad;
+  text-shadow: 0 0 0.7em #8e44ad, 0 0 0px #8e44ad, 0 0 0px #8e44ad;
 }
 
 .belize {
-  color: #007BFF;
-  text-shadow: 0 0 2em #007BFF, 0 0 0px #007BFF, 0 0 0px #007BFF;
+  color: #007bff;
+  text-shadow: 0 0 2em #007bff, 0 0 0px #007bff, 0 0 0px #007bff;
 }
 
 .pomegranate {
@@ -342,12 +391,12 @@ header button svg {
 
 .green {
   color: #05c766;
-  text-shadow: 0 0 .6em #05c766, 0 0 0px #05c766, 0 0 0px #05c766;
+  text-shadow: 0 0 0.6em #05c766, 0 0 0px #05c766, 0 0 0px #05c766;
 }
 
 .midnight {
-  color: #0eb1b1;
-  text-shadow: 0 0 .9em #0eb1b1, 0 0 0px #0eb1b1, 0 0 0px #0eb1b1;
+  color: #01c7d8;
+  text-shadow: 0 0 0.9em #01c7d8, 0 0 0px #01c7d8, 0 0 0px #01c7d8;
 }
 
 .hero .content p {
@@ -362,7 +411,7 @@ header button svg {
   text-align: justify;
 }
 
-.hero .content .sized{
+.hero .content .sized {
   width: 92%;
 }
 
@@ -373,10 +422,6 @@ header button svg {
 }
 
 .hero .content button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7vw;
   padding: 0 1vw;
   margin-top: 1.9vw;
 }
@@ -384,124 +429,22 @@ header button svg {
 .hero .content .btn {
   width: 15.5vw;
   height: 3.8vw;
-  background-image: var(--btn-gradient);
-  font-family: "Rubik";
-  letter-spacing: 0.09vw;
-  color: #ffebee;
-  font-size: 1.1vw;
-  font-weight: 600;
-  border: none;
-  border-radius: 20vw;
-  cursor: pointer;
   margin-top: 1.9vw;
-  text-transform: uppercase;
-  scale: 1;
-  box-shadow: 0px 0px 1.4em transparent;
-  transition: color 0.3s ease-in-out ,scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.hero .content .btn:hover {
-  scale: 1.06;
-  color: #fff; 
-  text-decoration: none;
-  box-shadow: 0px 0px 10em rgb(255, 255, 255);
-}
-
-.hero .content .btn:active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  opacity: 1;
-  animation: ripple-effect 0.6s ease-out;
-}
-
-.hero .content .btn:active {
-  transform: scale(0.95);
-  box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.5);
+.hero .content .btn::before {
+  width: 15.5vw;
+  height: 3.8vw;
 }
 
 .hero .content .search-btn {
   width: 4vw;
   height: 4vw;
-  background-image: var(--btn-gradient);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  scale: 1;
-  box-shadow: 0px 0px 1.4em transparent;
-  transition: scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.hero .content .search-btn:hover {
-  scale: 1.06;
-  box-shadow: 0px 0px 7em rgb(255, 255, 255);
-}
-
-.hero .content .search-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.5);
-}
-
-.hero .content .search-btn:active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  opacity: 1;
-  animation: ripple-effect 0.6s ease-out;
-}
-
-.hero .content .btn svg {
-  width: 2.7vw;
-  height: auto;
-  fill: #ffebee;
-  transition: fill 0.4s ease-in-out;
-}
-
-.hero .content .btn:hover svg {
-  fill: #fff;
-}
-
-.hero .content .search-btn svg {
-  width: 1.5vw;
-  padding: 7px 0;
-  fill: #ffebee;
-  transition: fill 0.4s ease-in-out;
-}
-
-.hero .content .search-btn:hover svg {
-  fill: #fff;
-}
-
-@keyframes ripple-effect {
-  0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
-  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-}
-
-@keyframes pulse-slide {
-  0% {
-    opacity: 0.4;
-    transform: scaleX(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scaleX(1.1);
-  }
-  100% {
-    opacity: 0.4;
-    transform: scaleX(1);
-  }
+.hero .content .search-btn::before {
+  width: 4vw;
+  height: 4vw;
 }
 
 .hero .woman {
@@ -512,14 +455,14 @@ header button svg {
   position: relative;
 }
 
-.hero .woman .img1{
+.hero .woman .img1 {
   width: 45vw;
   height: auto;
   z-index: 2;
   position: absolute;
 }
 
-.hero .woman .img2{
+.hero .woman .img2 {
   width: 45vw;
   height: auto;
   right: 4vw;
@@ -575,60 +518,11 @@ header button svg {
 .about .content button {
   width: 15.5vw;
   height: 3.8vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7vw;
-  background-image: var(--btn-gradient);
-  font-family: "Rubik";
-  letter-spacing: 0.09vw;
-  color: #ffebee;
-  font-size: 1.1vw;
-  font-weight: 600;
-  border: none;
-  border-radius: 20vw;
-  cursor: pointer;
-  text-transform: uppercase;
-  scale: 1;
-  box-shadow: 0px 0px 1.4em transparent;
-  transition: color 0.3s ease-in-out ,scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.about .content button:hover {
-  scale: 1.06;
-  color: #fff; 
-  text-decoration: none;
-  box-shadow: 0px 0px 10em rgb(255, 255, 255);
-}
-
-.about .content button:active::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  opacity: 1;
-  animation: ripple-effect 0.6s ease-out;
-}
-
-.about .content button:active {
-  transform: scale(0.95);
-  box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.5);
-}
-
-.about .content button svg {
-  width: 2.4vw;
-  height: auto;
-  fill: #ffebee;
-  transition: fill 0.4s ease-in-out;
-}
-
-.about .content button:hover svg {
-  fill: #fff;
+.about .content button::before {
+  width: 15.5vw;
+  height: 3.8vw;
 }
 
 /* Chart Section */
@@ -1005,12 +899,12 @@ header button svg {
   margin: 1.5em 2vw;
 }
 
-.faq .container .accordion input[type="radio"]:checked+label+.description p {
+.faq .container .accordion input[type="radio"]:checked + label + .description p {
   max-height: 400px;
   padding: 10px 10px 20px;
 }
 
-.faq .container .accordion input[type="radio"]:checked+label::before {
+.faq .container .accordion input[type="radio"]:checked + label::before {
   content: "-";
   font-family: "Poppins";
   color: #ffffff;
