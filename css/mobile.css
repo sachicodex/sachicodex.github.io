@@ -5,7 +5,7 @@
   }
 
   :root {
-    --primary-text-color: #eef0ff;
+    --primary-text-color: #cccfe3bc;
     --title-color: linear-gradient(180deg, #e9e5fa, #cbbeff);
     --title-font: "codex";
   }
@@ -26,7 +26,7 @@
     outline: none;
   }
 
-  .mobile button{
+  .mobile button {
     border-radius: 4vw;
     max-height: 60px;
     font-size: clamp(8px, 3.5vw, 20px);
@@ -129,15 +129,14 @@
   .mobile header .content .first button {
     width: auto;
     height: auto;
-    background: linear-gradient(180deg, #06006f, #020024);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    border-radius: 50%;
+    border-radius: 35%;
     cursor: pointer;
     position: relative;
-    padding: 1.5em;
+    padding: 0.9em;
   }
 
   .mobile header nav .content .items {
@@ -192,7 +191,13 @@
     width: 90vw;
     height: auto;
     z-index: 1;
-    background-image: conic-gradient(from 180deg, rgb(255, 138, 138), rgb(0, 0, 0), #8c00ff, rgb(0, 0, 0));
+    background-image: conic-gradient(
+      from 180deg,
+      rgb(255, 138, 138),
+      rgb(0, 0, 0),
+      #8c00ff,
+      rgb(0, 0, 0)
+    );
     -webkit-filter: blur(100px);
   }
 
@@ -215,7 +220,7 @@
   .mobile .hero .content p {
     font-family: "Poppins";
     color: var(--primary-text-color);
-    font-size: clamp(5px, 3.3vw, 18px);
+    font-size: clamp(5px, 3.4vw, 18px);
     font-weight: 600;
     text-align: center;
     margin-top: 0.5vh;
@@ -228,7 +233,7 @@
   }
 
   .mobile .hero .content .btn {
-    margin-top: 3vh;
+    margin-top: 5vh;
     width: 100%;
     height: 15vw;
     font-size: clamp(8px, 4.5vw, 20px);
@@ -291,7 +296,7 @@
     width: 60vw;
     height: 13vw;
     margin-top: 3vh;
-    gap: .4em;
+    gap: 0.4em;
   }
 
   .mobile .about .content button::before {
@@ -527,7 +532,11 @@
     border-radius: 8vw;
     padding: 0.7vw;
     border: 0px solid transparent;
-    background-image: linear-gradient(to bottom right, rgba(166, 0, 199, 0.4), rgba(81, 0, 97, 0.2));
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(166, 0, 199, 0.4),
+      rgba(81, 0, 97, 0.2)
+    );
     background-clip: padding-box;
   }
 
@@ -536,7 +545,11 @@
     border-radius: 8vw;
     padding: 0.7vw;
     border: 0px solid transparent;
-    background-image: linear-gradient(to bottom, rgba(166, 0, 199, 0.4), rgba(81, 0, 97, 0.2));
+    background-image: linear-gradient(
+      to bottom,
+      rgba(166, 0, 199, 0.4),
+      rgba(81, 0, 97, 0.2)
+    );
     background-clip: padding-box;
     object-fit: cover;
   }
@@ -545,7 +558,11 @@
     border-radius: 8vw;
     padding: 0.7vw;
     border: 0px solid transparent;
-    background-image: linear-gradient(to bottom left, rgba(166, 0, 199, 0.4), rgba(81, 0, 97, 0.2));
+    background-image: linear-gradient(
+      to bottom left,
+      rgba(166, 0, 199, 0.4),
+      rgba(81, 0, 97, 0.2)
+    );
     background-clip: padding-box;
   }
 
@@ -609,7 +626,7 @@
     text-align: left;
     max-height: 0px;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 2vw;
     transition: max-height 0.8s, padding 0.8s;
   }
 
@@ -622,14 +639,26 @@
 
   .mobile .faq .accordion li.active {
     border-radius: 6vw;
-}
+  }
 
-  .mobile .faq .container .accordion input[type="radio"]:checked + label + .description p {
+  .mobile
+    .faq
+    .container
+    .accordion
+    input[type="radio"]:checked
+    + label
+    + .description
+    p {
     max-height: 400px;
     padding: 2vw;
   }
 
-  .mobile .faq .container .accordion input[type="radio"]:checked + label::before {
+  .mobile
+    .faq
+    .container
+    .accordion
+    input[type="radio"]:checked
+    + label::before {
     content: "-";
     font-family: "Poppins";
     color: #ffffff;
@@ -677,21 +706,22 @@
     width: 98.8vw;
     height: 70%;
     position: relative;
-    background: rgba(33, 35, 82, 0.325);
-    border: 0.35vw solid rgba(187, 71, 213, 0.2);
-    border-top-left-radius: 4.7vw;
-    border-top-right-radius: 4.7vw;
+    background: black;
+    border-top: 1vw solid rgba(84, 1, 161, 0.399);
+    border-top-left-radius: 15vw;
+    border-top-right-radius: 15vw;
+    box-shadow: 0px -10px 10px 0px black;
   }
 
   .footer .container .gradient {
     width: 100%;
-    height: 100%;
-    background: #010057;
-    border-radius: 130%;
+    height: 130%;
+    background: #4b007a;
+    border-radius: 180%;
     z-index: -1;
     position: relative;
-    top: -75vh;
-    filter: blur(200px);
+    top: -81vh;
+    filter: blur(100px);
     -webkit-backdrop-filter: blur(10px);
   }
 
@@ -745,8 +775,8 @@
     height: 4vw;
     max-height: 100px;
     padding: max(20px, 5%) max(50px, 5%);
-    background: #130040;
-    border: 0.3vw solid rgba(19, 0, 115, 0.5);
+    background: #35005671;
+    border: .16em solid #f3e5f536;
     border-radius: 3vw;
     font-family: "DM Mono";
     font-size: clamp(10px, 4vw, 18px);
