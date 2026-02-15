@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /res/img/
 Allow: /res/img/headshot.png
+# Allow favicon
+Allow: /favicon-search.png
 Sitemap: https://sachicodex.github.io/sitemap.xml
