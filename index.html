@@ -123,7 +123,21 @@
     />
   </head>
 
-  <body>
+  <body class="is-loading">
+    <div class="site-loader" id="siteLoader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-ring">
+          <img
+            class="loader-logo"
+            src="res/favicon/android-chrome-512x512.png"
+            alt=""
+          />
+        </div>
+        <div class="loader-text">Loading</div>
+        <div class="loader-subtext">Preparing the experience</div>
+      </div>
+    </div>
+
     <!--=========================================
                     Navigation Section
        =========================================-->
