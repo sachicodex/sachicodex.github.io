@@ -83,11 +83,11 @@ body.is-loading {
 
 @keyframes loader-spin {
   0%{
-  transform: scale(0.75)}
+  transform: rotate(0deg)}
   50%{
-  transform: scale(0.95)}
+  transform: rotate(3600deg)}
   100%{
-  transform: scale(0.75)}
+  transform: rotate(3700deg)}
 }
 
 `;
