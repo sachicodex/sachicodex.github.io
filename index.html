@@ -313,11 +313,11 @@
             </article>
             <div class="bottom">
               <article class="left card" data-scroll="pop-in">
-                <h1>1+</h1>
+                <h1>2+</h1>
                 <p>Years of Experience</p>
               </article>
               <article class="right card" data-scroll="pop-in">
-                <h1>3+</h1>
+                <h1>4+</h1>
                 <p>Projects Shipped</p>
               </article>
             </div>
@@ -337,13 +337,16 @@
             functional, and user-friendly digital products.
           </p>
           <button
-            class="btn btn-primary only-desktop only-tablet"
+            class="btn btn-primary project-toggle only-desktop only-tablet"
+            type="button"
+            data-project-toggle
+            aria-expanded="false"
             data-scroll="reveal-right"
           >
             View All Projects ➜
           </button>
         </div>
-        <div class="projects-wrapper">
+        <div class="projects-wrapper is-collapsed" id="projectsWrap">
           <article class="item" data-scroll="soft-zoom">
             <img
               class="item-bg"
@@ -353,12 +356,13 @@
             />
 
             <div class="item-content">
-              <h5 class="item-title">Agenix - AI Powered</h5>
+              <h5 class="item-title">Agenix</h5>
               <p class="item-subtitle">
-                AI-powered app for creating and managing events easily.
+                An intelligent event management application integrated with
+                Google Calendar.
               </p>
 
-              <a class="item-cta" href="#">
+              <a class="item-cta" href="https://github.com/sachicodex/agenix">
                 View Details <span class="cta-arrow">↗</span>
               </a>
             </div>
@@ -373,12 +377,14 @@
             />
 
             <div class="item-content">
-              <h5 class="item-title">Nuvex Event</h5>
+              <h5 class="item-title">Sendix</h5>
               <p class="item-subtitle">
-                Smart Google Calendar event widget for Windows.
+                A smart file sharing application that simplifies sharing and
+                collaboration with a user-friendly interface and secure file
+                transfer.
               </p>
 
-              <a class="item-cta" href="#">
+              <a class="item-cta" href="https://github.com/sachicodex/sendix">
                 View Details <span class="cta-arrow">↗</span>
               </a>
             </div>
@@ -395,16 +401,17 @@
             <div class="item-content">
               <h5 class="item-title">Tably</h5>
               <p class="item-subtitle">
-                Minimal new-tab extension for focus and productivity.
+                A modern and customizable new tab extension designed to enhance
+                productivity on web browsers.
               </p>
 
-              <a class="item-cta" href="#">
+              <a class="item-cta" href="https://github.com/sachicodex/tably">
                 View Details <span class="cta-arrow">↗</span>
               </a>
             </div>
           </article>
 
-          <article class="item only-tablet" data-scroll="soft-zoom">
+          <article class="item project-extra" data-scroll="soft-zoom">
             <img
               class="item-bg"
               src="res/img/find-beats-card.png"
@@ -413,10 +420,16 @@
             />
 
             <div class="item-content">
-              <h5 class="item-title">Find Beats</h5>
-              <p class="item-subtitle">Music recognition Application</p>
+              <h5 class="item-title">NUVEX Event</h5>
+              <p class="item-subtitle">
+                A clean and powerful platform designed for streamlined event
+                creation and management.
+              </p>
 
-              <a class="item-cta" href="#">
+              <a
+                class="item-cta"
+                href="https://github.com/sachicodex/nuvex-event"
+              >
                 View Details <span class="cta-arrow">↗</span>
               </a>
             </div>
@@ -425,7 +438,13 @@
             class="only-mobile"
             style="justify-content: center; margin: 3vh auto"
           >
-            <button class="btn btn-primary" data-scroll="fade-up-sm">
+            <button
+              class="btn btn-primary project-toggle"
+              type="button"
+              data-project-toggle
+              aria-expanded="false"
+              data-scroll="fade-up-sm"
+            >
               View All Projects ➜
             </button>
           </div>
@@ -453,15 +472,30 @@
             <article class="item timeline" data-scroll="fade-up-sm">
               <div class="marker"><span class="dot"></span></div>
               <div class="content">
-                <h6>Actively Seeking Opportunities</h6>
-                <p class="company">Web & Flutter Developer</p>
+                <h6>Started University Journey</h6>
+                <p class="company">Undergraduate Student - BICT (Hons)</p>
                 <p class="description">
-                  I’m currently looking for opportunities in web and mobile
-                  development where I can contribute, learn, and grow while
-                  building meaningful digital products.
+                  Began my university studies, taking the next step in my
+                  academic and professional journey while continuing to develop
+                  my skills in software, web, and mobile application
+                  development.
                 </p>
               </div>
-              <div class="date">2026 – Present</div>
+              <div class="date">2027 – Present</div>
+            </article>
+
+            <article class="item timeline" data-scroll="fade-up-sm">
+              <div class="marker"><span class="dot"></span></div>
+              <div class="content">
+                <h6>Passed G.C.E. A/L Examination</h6>
+                <p class="company">Engineering Technology Stream</p>
+                <p class="description">
+                  Obtained B, B, and C grades in the Engineering Technology
+                  stream, achieving university entrance qualification and
+                  marking a significant milestone in my academic journey.
+                </p>
+              </div>
+              <div class="date">April 2026</div>
             </article>
 
             <article class="item timeline" data-scroll="fade-up-sm">
@@ -545,109 +579,81 @@
           I turn ideas into simple, beautiful, and easy-to-use digital products
           that people love.
         </p>
-        <div class="service">
-          <div class="flip-card" data-scroll="pop-in">
-            <div class="card">
-              <div class="front">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+        <div class="service-folder">
+          <div class="folder-stage">
+            <div class="folder-base">
+              <div class="folder-glow"></div>
+            </div>
+
+            <div class="folder-sheets">
+              <article
+                class="service-sheet web-sheet"
+                data-scroll="fade-up-sm"
+                data-scroll-trigger="0.25"
+              >
+                <div class="sheet-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M7.29291 14.2929C6.90238 14.6834 6.90238 15.3166 7.29291 15.7071C7.68343 16.0976 8.31659 16.0976 8.70712 15.7071L11.2071 13.2071C11.8738 12.5404 11.8738 11.4596 11.2071 10.7929L8.70712 8.29289C8.3166 7.90237 7.68343 7.90237 7.29291 8.29289C6.90238 8.68342 6.90238 9.31658 7.29291 9.70711L9.5858 12L7.29291 14.2929ZM13 14C12.4477 14 12 14.4477 12 15C12 15.5523 12.4477 16 13 16H16C16.5523 16 17 15.5523 17 15C17 14.4477 16.5523 14 16 14H13ZM22 7.93418C22 7.95604 22 7.97799 22 8.00001L22 16.0658C22.0001 16.9523 22.0001 17.7161 21.9179 18.3278C21.8297 18.9833 21.631 19.6117 21.1213 20.1213C20.6117 20.631 19.9833 20.8297 19.3278 20.9179C18.7161 21.0001 17.9523 21.0001 17.0658 21L6.9342 21C6.0477 21.0001 5.28388 21.0001 4.67222 20.9179C4.0167 20.8297 3.38835 20.631 2.87869 20.1213C2.36902 19.6117 2.17028 18.9833 2.08215 18.3278C1.99991 17.7161 1.99995 16.9523 2 16.0658L2 7.9342C1.99995 7.0477 1.99991 6.28388 2.08215 5.67221C2.17028 5.0167 2.36902 4.38835 2.87869 3.87868C3.38835 3.36902 4.0167 3.17028 4.67222 3.08215C5.28388 2.99991 6.04769 2.99995 6.93418 3L17 3.00001C17.022 3.00001 17.044 3 17.0658 3C17.9523 2.99995 18.7161 2.99991 19.3278 3.08215C19.9833 3.17028 20.6117 3.36902 21.1213 3.87869C21.631 4.38835 21.8297 5.0167 21.9179 5.67221C22.0001 6.28387 22.0001 7.04769 22 7.93418Z"
                     ></path>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
+                <span class="sheet-kicker">01 / Build</span>
                 <h6>Web Development</h6>
                 <p>
                   Fast, responsive websites built for performance, usability,
                   and real-world impact.
                 </p>
-                <a href="#">Learn more</a>
-              </div>
-
-              <div class="back">
-                <h6>What You Get</h6>
-
                 <ul>
                   <li>Fast loading pages</li>
                   <li>Mobile-first layouts</li>
-                  <li>Clean code structure</li>
-                  <li>SEO-friendly setup</li>
-                  <li>Secure backend</li>
+                  <li>SEO-ready structure</li>
                 </ul>
+              </article>
 
-                <button class="btn btn-primary">Start a Project</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card" data-scroll="pop-in">
-            <div class="card">
-              <div class="front">
-                <svg
-                  viewBox="0 0 32 32"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+              <article
+                class="service-sheet app-sheet"
+                data-scroll="fade-up-sm"
+                data-scroll-trigger="0.25"
+              >
+                <div class="sheet-icon">
+                  <svg
+                    viewBox="0 0 32 32"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <title>mobile</title>
                     <path
                       d="M22 0.75h-12c-1.794 0.002-3.248 1.456-3.25 3.25v24c0.002 1.794 1.456 3.248 3.25 3.25h12c1.794-0.001 3.249-1.456 3.25-3.25v-24c-0.002-1.794-1.456-3.248-3.25-3.25h-0zM22.75 28c-0 0.414-0.336 0.75-0.75 0.75h-12c-0.414-0-0.75-0.336-0.75-0.75v-24c0.001-0.414 0.336-0.749 0.75-0.75h12c0.414 0 0.75 0.336 0.75 0.75v0zM18 25.25h-4c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h4c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0z"
                     ></path>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
+                <span class="sheet-kicker">02 / Ship</span>
                 <h6>App Development</h6>
                 <p>
                   Smooth, high-performance mobile apps designed for speed,
                   usability, and reliability.
                 </p>
-                <a href="#">Learn more</a>
-              </div>
-
-              <div class="back">
-                <h6>What You Get</h6>
-
                 <ul>
-                  <li>Cross-platform apps</li>
-                  <li>Smooth user flow</li>
+                  <li>Cross-platform delivery</li>
                   <li>Optimized performance</li>
-                  <li>Secure APIs</li>
                   <li>Store-ready builds</li>
                 </ul>
+              </article>
 
-                <button class="btn btn-primary">Start a Project</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card" data-scroll="pop-in">
-            <div class="card">
-              <div class="front">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+              <article
+                class="service-sheet design-sheet"
+                data-scroll="fade-up-sm"
+                data-scroll-trigger="0.25"
+              >
+                <div class="sheet-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M14 12.5001C14 13.3285 13.3284 14.0001 12.5 14.0001C11.6716 14.0001 11 13.3285 11 12.5001C11 11.6717 11.6716 11.0001 12.5 11.0001C13.3284 11.0001 14 11.6717 14 12.5001Z"
                     ></path>
@@ -671,43 +677,28 @@
                       clip-rule="evenodd"
                       d="M11.5017 1.02215C15.4049 0.791746 19.5636 2.32444 21.8087 5.41131C22.5084 6.37324 22.8228 7.63628 22.6489 8.83154C22.471 10.054 21.7734 11.2315 20.4472 11.8945C19.6389 12.2987 18.7731 12.9466 18.2401 13.668C17.7158 14.3778 17.6139 14.9917 17.8944 15.5529C18.4231 16.6102 18.8894 17.9257 18.8106 19.1875C18.7699 19.8375 18.5828 20.4946 18.1664 21.0799C17.7488 21.6667 17.1448 22.1192 16.3714 22.4286C14.6095 23.1333 12.6279 23.1643 10.8081 22.8207C8.98579 22.4765 7.24486 21.7421 5.92656 20.8194C4.00568 19.4748 2.47455 17.6889 1.71371 15.4464C0.9504 13.1965 0.995912 10.5851 2.06024 7.65803C3.64355 3.30372 7.56248 1.25469 11.5017 1.02215ZM11.6196 3.01868C8.26589 3.21665 5.18483 4.9176 3.93984 8.34149C3.00414 10.9148 3.01388 13.0536 3.60768 14.8038C4.20395 16.5613 5.42282 18.0255 7.07347 19.1809C8.14405 19.9303 9.6169 20.5604 11.1792 20.8554C12.7442 21.151 14.3181 21.0959 15.6286 20.5716C16.308 20.2999 16.7678 19.8099 16.8145 19.0627C16.8606 18.3245 16.5769 17.3901 16.1056 16.4473C15.3639 14.9639 15.8542 13.5318 16.6315 12.4796C17.4002 11.4391 18.5455 10.6093 19.5528 10.1057C20.2266 9.76878 20.5747 9.19623 20.6697 8.54355C20.7686 7.86365 20.5831 7.12638 20.1913 6.58769C18.4364 4.17486 15.0093 2.81858 11.6196 3.01868Z"
                     ></path>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
+                <span class="sheet-kicker">03 / Design</span>
                 <h6>UI | UX Design</h6>
                 <p>
                   Clean, intuitive interfaces focused on clarity, simplicity,
                   and user flow.
                 </p>
-                <a href="#">Learn more</a>
-              </div>
-
-              <div class="back">
-                <h6>What You Get</h6>
-
                 <ul>
-                  <li>User flow design</li>
-                  <li>Wireframes & prototypes</li>
-                  <li>High-fidelity UI</li>
-                  <li>Design systems</li>
-                  <li>Usability testing</li>
+                  <li>User flow mapping</li>
+                  <li>Wireframes and prototypes</li>
+                  <li>High-fidelity interfaces</li>
                 </ul>
+              </article>
 
-                <button class="btn btn-primary">Start a Project</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card" data-scroll="pop-in">
-            <div class="card">
-              <div class="front">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+              <article
+                class="service-sheet brand-sheet"
+                data-scroll="fade-up-sm"
+                data-scroll-trigger="0.25"
+              >
+                <div class="sheet-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -722,29 +713,20 @@
                     <path
                       d="M17.7585 12.8966C17.8249 12.6499 18.1749 12.6499 18.2413 12.8966L18.5989 14.2246C18.622 14.3107 18.6893 14.3779 18.7753 14.401L20.1033 14.7586C20.35 14.825 20.35 15.175 20.1033 15.2414L18.7753 15.599C18.6893 15.6221 18.622 15.6893 18.5989 15.7754L18.2413 17.1034C18.1749 17.3501 17.8249 17.3501 17.7585 17.1034L17.4009 15.7754C17.3778 15.6893 17.3106 15.6221 17.2245 15.599L15.8965 15.2414C15.6498 15.175 15.6498 14.825 15.8965 14.7586L17.2245 14.401C17.3106 14.3779 17.3778 14.3107 17.4009 14.2246L17.7585 12.8966Z"
                     ></path>
-                  </g>
-                </svg>
+                  </svg>
+                </div>
+                <span class="sheet-kicker">04 / Brand</span>
                 <h6>Digital Branding</h6>
                 <p>
                   Modern brand identities designed to feel consistent,
                   memorable, and professional.
                 </p>
-                <a href="#">Learn more</a>
-              </div>
-
-              <div class="back">
-                <h6>What You Get</h6>
-
                 <ul>
-                  <li>Logo & identity</li>
-                  <li>Visual systems</li>
-                  <li>Marketing creatives</li>
-                  <li>Typography & colors</li>
-                  <li>Brand guidelines</li>
+                  <li>Logo and identity systems</li>
+                  <li>Typography and color direction</li>
+                  <li>Brand guideline kits</li>
                 </ul>
-
-                <button class="btn btn-primary">Start a Project</button>
-              </div>
+              </article>
             </div>
           </div>
         </div>
